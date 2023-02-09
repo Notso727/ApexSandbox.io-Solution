@@ -1,0 +1,15 @@
+public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
+    
+    //Set the initial Boolean that we will set and return
+    Boolean passedCourse = False;
+
+    //Run the logic to check the combos of passed criteria
+    if ((passedExam == True) && (passedAssignments == True)){
+        passedCourse = True;
+    } else if ((passedAssignments == True) && (passedProject == True)){
+        passedCourse = True;
+    } else if ((passedExam == True) && (passedProject == True)){
+        passedCourse = True;
+    }
+    return passedCourse;
+}
