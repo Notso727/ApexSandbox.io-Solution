@@ -1,10 +1,20 @@
 public String formatName(String firstName, String lastName) {
 
-    //Given two non-empty strings firstName and lastName, return the name as a single string with
-    // a space in between (firstName lastName).
+    //Given two strings firstName and lastName, return the name in the format LastName, FirstName.
+    // In case one of the names is null or empty, return only the non-empty part of the name.
+    // If both are null or empty, return an empty string.
 
-    //Create a variable to collect the strings
-    String fullName = firstName + ' ' + lastName;
-    return fullName;
+
+    //Create an if conditional to check for nulls and then return the strings
+
+    if(String.isBlank(firstName)) {
+        return lastName;
+    } else if (String.isBlank(lastName)) {
+        return firstName;
+    } else if(String.isBlank(lastName) && String.isBlank(firstName)) {
+        return '';
+    }
+
+    return lastName + ', ' + firstName;
 
 }
