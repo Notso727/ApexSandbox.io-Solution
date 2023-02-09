@@ -1,0 +1,17 @@
+public Boolean isEndWithZero(Integer num){
+     
+     //Set a boolean an integer variables
+
+     Boolean status = False;
+     Integer remainder;
+
+     //Divide by 10, if the modulus is 0 its true
+
+     remainder = math.mod(num, 10);
+
+     if(remainder == 0){
+         status = True;
+    }
+    return status;
+
+}
