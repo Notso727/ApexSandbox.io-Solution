@@ -1,0 +1,17 @@
+public Integer sumToN(Integer n) {
+
+    //Implement the method sumToN that calculates and returns the sum of all numbers (inclusive) from 1 to n.
+    // Assume that n will be non-zero positive integer.
+
+    //Create an integer to capture the sum.
+
+    Integer sum = 0;
+
+    //Loop from 1 to N and add aggregate
+    for(Integer i = 1; i <= n; i++){
+        sum += i;
+    }
+
+    return sum;
+
+}
