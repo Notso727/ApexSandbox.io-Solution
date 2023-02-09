@@ -1,0 +1,11 @@
+public String evenOrOdd(Integer num) {
+    
+    //Create our string variable
+    String response = 'odd';
+
+    //Create our logic; if the num is divisible by two with no modulus its even
+    if(math.mod(num,2) == 0){
+        response = 'even';
+    }  
+    return response;
+}
