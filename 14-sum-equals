@@ -1,0 +1,10 @@
+public Boolean sumEquals(Integer a, Integer b, Integer c) {
+    
+    Boolean status = FALSE;
+
+    if (a + b == c) {
+        status = TRUE;
+    }
+    return status;
+    
+}
