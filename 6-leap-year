@@ -1,0 +1,17 @@
+public Boolean isLeapYear(Integer year) {
+    //Set a variable for the return
+
+    Boolean isValid = False;
+
+    //Check to see if year is evenly divisible by 4 and not divisible by 100
+
+    if((math.mod(year, 4) == 0) &&
+        (math.mod(year, 100) != 0)) isValid = True;
+    //Now check to see if year is divisible by 100 and if it is, by 400
+    else if(math.mod(year, 100) == 0){
+        if(math.mod(year, 400) == 0)
+            isValid = True;
+    }    
+    
+    return isValid;
+}
