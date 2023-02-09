@@ -1,0 +1,39 @@
+public Integer rockPaperScissors(String player1, String player2) {
+    //Set variables to return for the player
+    Integer playerToRet;
+
+    //Logic for Rock, Paper, Scissors. Run through all combos of options and return the player
+
+    if(player1 == 'rock' && player2 == 'paper'){
+        playerToRet = 2;
+    } else if 
+        (player1 == 'paper' & player2 == 'rock'){
+        playerToRet = 1;
+    } else if 
+        (player1 == 'rock' & player2 == 'scissors'){
+        playerToRet = 1;
+    } else if 
+        (player1 == 'scissors' & player2 == 'rock'){
+        playerToRet = 2;
+    } else if 
+        (player1 == 'scissors' & player2 == 'paper'){
+        playerToRet = 1;
+    } else if 
+        (player1 == 'paper' & player2 == 'scissors'){
+        playerToRet = 2;        
+
+        //Now check for combos where they are the same and return 0
+        
+    } else if 
+        (player1 == 'rock' & player2 == 'rock'){
+        playerToRet = 0;
+    } else if 
+        (player1 == 'paper' & player2 == 'paper'){
+        playerToRet = 0;
+    } else if 
+        (player1 == 'scissors' & player2 == 'scissors'){
+        playerToRet = 0;
+    } 
+      
+    return playerToRet;
+}
