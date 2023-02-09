@@ -4,16 +4,11 @@ public String formatName(String firstName, String lastName) {
     // In case one of the names is null or empty, return only the non-empty part of the name.
     // If both are null or empty, return an empty string.
 
-
     //Create an if conditional to check for nulls and then return the strings
 
-    if(String.isBlank(firstName)) {
-        return lastName;
-    } else if (String.isBlank(lastName)) {
-        return firstName;
-    } else if(String.isBlank(lastName) && String.isBlank(firstName)) {
-        return '';
-    }
+    if(String.isBlank(firstName) && !String.isBlank(lastName)) return lastName;
+    if(String.isBlank(lastName) && String.isNotBlank(firstName)) return firstName;
+    if(String.isBlank(lastName) && String.isBlank(firstName)) return '';
 
     return lastName + ', ' + firstName;
 
