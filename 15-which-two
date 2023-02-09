@@ -1,0 +1,17 @@
+public String whichTwo(Integer a, Integer b, Integer c) {
+    
+    //Set our variables
+    String returnLetter;
+
+    //Create our logic
+    if(a + b == c){
+        returnLetter = 'c';
+    } else if (a + c == b){
+        returnLetter = 'b';
+    } else if (b + c == a){
+        returnLetter = 'a';
+    } else {
+        returnLetter = '';
+    }
+    return returnLetter;
+}
