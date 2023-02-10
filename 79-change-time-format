@@ -22,8 +22,8 @@ public String changeTimeFormat(String strTime) {
         hourInt = hourInt - 12;
         am_pm = 'PM';
     }
-    if (hourInt = 0) {
-        hourInt = hourInt = 12;
+    if (hourInt == 0) {
+        hourInt = 12;
     }
 
     //Convert the Int back to a String
