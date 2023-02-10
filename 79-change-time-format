@@ -17,7 +17,7 @@ public String changeTimeFormat(String strTime) {
     hourInt = Integer.valueOf(strTime.substringBefore(':'));
     minuteStr = strTime.substringAfter(':');
 
-    //Then do the required math
+    //Then do the required logic
     if (hourInt >= 12) {
         hourInt = hourInt - 12;
         am_pm = 'PM';
@@ -27,8 +27,10 @@ public String changeTimeFormat(String strTime) {
     }
 
     //Convert the Int back to a String
-
     hourStr = String.valueOf(hourInt);
+
+    //Check to see if hourStr is two digits and add the '0'
+    if(hourStr.length() == 1) hourStr = '0' + hourStr;
 
     //Put it all together for the final return
     return hourStr + ':' + minuteStr + ' ' + am_pm;
