@@ -16,7 +16,7 @@ public String changeTimeFormat(String strTime) {
 
     //Then do the required math
     if (hourInt > 12) {
-        hourInt = hourInt + 12;
+        hourInt = hourInt - 12;
         am_pm = 'PM';
     }
 
