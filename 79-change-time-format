@@ -1,0 +1,30 @@
+public String changeTimeFormat(String strTime) {
+
+    //13:50 and 01:50 PM are 24-hour and 12-hour representations of the same time. Implement the method
+    // changeTimeFormat that takes as input a string strTime formatted as a 24-hour string, and returns
+    // the equivalent 12-hour string.
+
+    //Create variables needed
+    Integer hourInt;
+    String hourStr;
+    String minuteStr;
+    String am_pm = 'AM';
+
+    //We need to convert the String to an Int
+    hourInt = Integer.valueOf(strTime.substringBefore(':'));
+    minuteStr = strTime.substringAfter(':');
+
+    //Then do the required math
+    if (hourInt > 12) {
+        hourInt = hourInt + 12;
+        am_pm = 'PM';
+    }
+
+    //Convert the Int back to a String
+
+    hourStr = String.valueOf(hourInt);
+
+    //Put it all together for the final return
+    return hourStr + ':' + minuteStr + am_pm;
+
+}
