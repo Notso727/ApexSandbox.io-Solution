@@ -4,6 +4,9 @@ public String changeTimeFormat(String strTime) {
     // changeTimeFormat that takes as input a string strTime formatted as a 24-hour string, and returns
     // the equivalent 12-hour string.
 
+    //TODO need to add a '0' if only a single digit
+    //TODO have to convert for 00 to be 12am
+
     //Create variables needed
     Integer hourInt;
     String hourStr;
@@ -18,6 +21,9 @@ public String changeTimeFormat(String strTime) {
     if (hourInt > 12) {
         hourInt = hourInt - 12;
         am_pm = 'PM';
+    }
+    if (hourInt = 0) {
+        hourInt = hourInt = 12;
     }
 
     //Convert the Int back to a String
