@@ -13,7 +13,7 @@ public Integer fibonacci(Integer n) {
     //Create a for loop to loop to n
     
     for(Integer i = 1; i <= n; i++) {
-       y += i - 1;
+       y += (i - 1);
     }
     
     return y;
