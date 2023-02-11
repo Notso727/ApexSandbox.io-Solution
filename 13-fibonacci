@@ -8,16 +8,15 @@ public Integer fibonacci(Integer n) {
      */
 
     //Create variable
-    Integer y = 1;
     Integer x = 1;
+    Integer y = 1;
     Integer z;
 
     //Create a for loop to loop to n
 
     for(Integer i = 1; i < n; i++) {
+        if(n < 3) z = 1;
         x + y = z;
-    //    x = y;
-    //    y = z;
     }
 
     return z;
