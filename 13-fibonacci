@@ -16,8 +16,8 @@ public Integer fibonacci(Integer n) {
 
     for(Integer i = 1; i < n; i++) {
         x + y = z;
-        x = y;
         y = z;
+        x = y;
     }
 
     return y;
