@@ -7,15 +7,17 @@ public Integer fibonacci(Integer n) {
      Assume that n will always be greater than 0.
      */
 
-    //Create variable
+     //Create variable
     Integer y;
     Integer x;
+    Integer z;
 
     //Create a for loop to loop to n
 
     for(Integer i = 0; i < n; i++) {
-        if(x == 1) y = 1;
-        x + y = y;
+        x + y = z;
+        x = y;
+        y = z;
     }
 
     return y;
