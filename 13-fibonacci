@@ -8,7 +8,7 @@ public Integer fibonacci(Integer n) {
      */
 
     //Create variable
-    Integer x = 1;
+    Integer x = 0;
     Integer y = 1;
     Integer z;
 
