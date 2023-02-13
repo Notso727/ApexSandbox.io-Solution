@@ -11,7 +11,7 @@ public Integer nextPrime(Integer num) {
 
     //Start at num + 1 and iterate until we find a prime
 
-    
+
     //Check to see if the number is 2 or 3 first
     if (num == 2 || num == 3) prime = true;
 
@@ -19,7 +19,7 @@ public Integer nextPrime(Integer num) {
     if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) prime = false;
 
     //Create our logic using trial division method
-    for (Integer i = 5; (i * i <= num); i += 6){
+    for (Integer i = 5; (i * i <= (num+50)); i += 6){
         if (Math.mod(num, i) == 0 || Math.mod(num, i + 2) == 0) prime = false;
         }
         prime = true;
