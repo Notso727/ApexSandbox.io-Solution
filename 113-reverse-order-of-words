@@ -10,6 +10,8 @@ public String reverseWordsInASentence(String sentence){
     //Create a list to collect the words
     List<String> word_list = new List<String>();
 
+    wordCount = sentence.countMatches(' ');
+
     //Lets use the substringBefore method from the String class
 
     for (Integer i = 1; i <= wordCount; i++) {
