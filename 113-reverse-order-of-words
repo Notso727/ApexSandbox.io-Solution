@@ -3,8 +3,6 @@ public String reverseWordsInASentence(String sentence){
     as an argument, and return a string with the order of the words reversed.
      */
 
-    //TODO Lets do this with a list and for loop
-
     //Create a variable to collect the number of words
     Integer wordCount;
     String newSentence;
@@ -21,8 +19,9 @@ public String reverseWordsInASentence(String sentence){
     }
 
     for (Integer j = wordCount; j >= 0; j--) {
-        newSentence = 'word_list(j)' + ' ';
+        newSentence = word_list.get(j) + ' ';
 
     }
+    
     return newSentence;
 }
