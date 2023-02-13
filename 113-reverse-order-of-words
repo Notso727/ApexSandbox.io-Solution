@@ -15,7 +15,7 @@ public String reverseWordsInASentence(String sentence){
     //Lets use the substringBefore method from the String class
 
     for (Integer i = 1; i <= wordCount; i++) {
-        word_list.add(sentence.substringAfter(' '));
+        word_list.add(sentence.substringBefore(' '));
     }
 
     for (Integer j = word_list.size() - 1; j >= 0; j--) {
