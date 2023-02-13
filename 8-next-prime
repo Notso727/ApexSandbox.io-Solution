@@ -11,20 +11,18 @@ public Integer nextPrime(Integer num) {
 
     //Start at num + 1 and iterate until we find a prime
 
-    do {
-        //Check to see if the number is 2 or 3 first
-        if (num == 2 || num == 3) prime = true;
+    
+    //Check to see if the number is 2 or 3 first
+    if (num == 2 || num == 3) prime = true;
 
-        //Next check to see if num is a pos num or is divisible 2 or 3
-        if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) prime = false;
+    //Next check to see if num is a pos num or is divisible 2 or 3
+    if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) prime = false;
 
-        //Create our logic using trial division method
-        for (Integer i = 5; (i * i <= num); i += 6){
-            if (Math.mod(num, i) == 0 || Math.mod(num, i + 2) == 0) prime = false;
+    //Create our logic using trial division method
+    for (Integer i = 5; (i * i <= num); i += 6){
+        if (Math.mod(num, i) == 0 || Math.mod(num, i + 2) == 0) prime = false;
         }
         prime = true;
-
-    } while (prime = false);
 
     //return that number (i)
 
