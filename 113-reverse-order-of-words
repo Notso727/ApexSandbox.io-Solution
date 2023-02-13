@@ -10,18 +10,14 @@ public String reverseWordsInASentence(String sentence){
     //Create a list to collect the words
     List<String> word_list = new List<String>();
 
-    wordCount = sentence.countMatches(' ') + 1;
-
     //Lets use the substringBefore method from the String class
 
     for (Integer i = 1; i <= wordCount; i++) {
         word_list.add(sentence.substringAfter(' '));
     }
 
-    for (Integer j = (wordCount - 1); j >= 0; j--) {
+    for (Integer j = word_list.size(); j >= 0; j--) {
         newSentence = word_list.get(j) + ' ';
-
     }
-
     return newSentence;
 }
