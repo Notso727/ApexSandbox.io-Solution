@@ -14,13 +14,13 @@ public Integer nextPrime(Integer num) {
 
         //Check to see if the number is 2 or 3 first
         if (num == 2 || num == 3) {
-            return num;
+            return num+1;
             //Next check to see if num is a pos num or is divisible 2 or 3
         } else if (num <=1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) {
-            return num;
+            return num+1;
             //Else create our logic using trial division method to find the next
         }
         
     }
-    return num;
+    return num+1;
 }
