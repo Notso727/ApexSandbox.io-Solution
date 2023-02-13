@@ -18,10 +18,10 @@ public String reverseWordsInASentence(String sentence){
         word_list.add(sentence.substringAfter(' '));
     }
 
-    for (Integer j = wordCount; j >= 0; j--) {
+    for (Integer j = (wordCount - 1); j >= 0; j--) {
         newSentence = word_list.get(j) + ' ';
 
     }
-    
+
     return newSentence;
 }
