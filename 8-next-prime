@@ -17,11 +17,13 @@ public Integer nextPrime(Integer num) {
 
         //Next check to see if num is a pos num or is divisible 2 or 3
         if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) prime = false;
-        
+
         num++;
 
     } while (prime = false);
 
     //return that number (i)
 
-    return num - 1;
+    return (num - 1);
+
+}
