@@ -1,0 +1,28 @@
+public String reverseWordsInASentence(String sentence){
+    /* Implement a function reverseWordsInASentence that will take a String containing words separated by spaces
+    as an argument, and return a string with the order of the words reversed.
+     */
+
+    //TODO Lets do this with a list and for loop
+
+    //Create a variable to collect the number of words
+    Integer wordCount;
+    String newSentence;
+
+    //Create a list to collect the words
+    List<String> word_list = new List<String>();
+
+    wordCount = sentence.countMatches(' ') + 1;
+
+    //Lets use the substringBefore method from the String class
+
+    for (Integer i = 1; i <= wordCount; i++) {
+        word_list.add(sentence.substringAfter(' '));
+    }
+
+    for (Integer j = wordCount; j >= 0; j--) {
+        newSentence = 'word_list(j)' + ' ';
+
+    }
+    return newSentence;
+}
