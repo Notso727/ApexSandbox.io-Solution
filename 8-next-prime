@@ -10,7 +10,7 @@ public Integer nextPrime(Integer num) {
 
     //Create a loop to loop from 1 to num + 1.  The next prime (num + 1) would be the answer
 
-    for(Integer i = num; i < (num + 1); i++){
+    for(Integer i = 1; i < (num + 1); i++){
 
         //Check to see if the number is 2 or 3 first
         if (num == 2 || num == 3) {
