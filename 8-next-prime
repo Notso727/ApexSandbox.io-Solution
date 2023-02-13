@@ -1,0 +1,26 @@
+public Integer nextPrime(Integer num) {
+    /*A prime number is a number greater than 1 that is not evenly divisible by any number greater than one and
+    smaller than itself. For example, 13 is a prime number because it is not evenly divisible by any number from
+    2 to 12.Implement the function nextPrime that takes as input an integer num and returns the smallest prime number
+    greater than num.
+     */
+    
+    //Create a return variable
+    
+
+    //Create a loop to loop from 1 to num + 1.  The next prime (num + 1) would be the answer
+
+    for(Integer i = num; i < (num + 1); i++){
+
+        //Check to see if the number is 2 or 3 first
+        if (num == 2 || num == 3) {
+            return num;
+            //Next check to see if num is a pos num or is divisible 2 or 3
+        } else if (num <=1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) {
+            return num;
+            //Else create our logic using trial division method to find the next
+        }
+        
+    }
+    return num;
+}
