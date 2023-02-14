@@ -9,7 +9,7 @@ public Integer nextPrime(Integer num) {
     Boolean prime = false;
 
     //increment num to a minimum of num +1
-    num = num + 1;
+    //num = num + 1;
 
     //Create a loop to loop from 1 to num + 1.  The next prime (num + 1) would be the answer
 
