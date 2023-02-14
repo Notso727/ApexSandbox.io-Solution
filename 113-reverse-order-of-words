@@ -9,11 +9,12 @@ public String reverseWordsInASentence(String sentence){
     List<String> word_list = reversedSentence.split(' ');
 
     //Create a Loop on List that will reverse the words
-    for( String word : word_list) {
+    for(String word : word_list) {
         word.reverse();
+        newSentence = word_list.toString();
     }
 
 //Now create a loop to assemble them.
-    newSentence = word_list.toString();
+    
     return newSentence;
 }
