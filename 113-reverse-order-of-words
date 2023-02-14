@@ -1,7 +1,7 @@
 public String reverseWordsInASentence(String sentence){
 
     //Check that sentence is not null first
-    if(sentence == null) return '1 ';
+    if(sentence == null) return '';
 
     //Reverse the sentence
     //Create a variable to hold that.
