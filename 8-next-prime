@@ -5,24 +5,28 @@ public Integer nextPrime(Integer num) {
     greater than num.
      */
 
-    //Create a boolean variable
+    //Create a return variable
     Boolean prime = false;
+
+    //increment num to a minimum of num +1
     num = num + 1;
 
-    //Start at num + 1 and iterate until we find a prime
-    
-    //Check to see if the number is 2 or 3 first
-    if (num == 2 || num == 3){
-        prime = true;
+    //Create a loop to loop from 1 to num + 1.  The next prime (num + 1) would be the answer
+
+    do {
+        //Check to see if the number is 2 or 3 first
+        if (num == 2 || num == 3) prime = true;
+
         //Next check to see if num is a pos num or is divisible 2 or 3
-    } else if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) {
-        prime = false;
-    } else { for (Integer i = 5; (i * i <= (num+50)); i += 6)
-        if (Math.mod(num, i) == 0 || Math.mod(num, i + 2) == 0) {
-            prime = false; 
+        if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) prime = false;
+
+        //Create our logic using trial division method
+        for (Integer i = 5; (i * i <= num); i += 6) {
+            if (Math.mod(num, i) == 0 || Math.mod(num, i + 2) == 0) prime = true;
         }
-        prime = true;
-    }
-    //return that number (i)
+
+    } while (prime = false);
+
     return num;
+
 }
