@@ -1,21 +1,26 @@
 public String reverseWordsInASentence(String sentence){
 
-//Reverse the sentence
-//Create a variable to hold that.
-    String reversedSentence = sentence.reverse();
-    String newSentence;
+    //Check that sentence is not null first
+    if(sentence != null) {
 
-//Create a list to hold the words
-    List<String> word_list = reversedSentence.split(' ');
+        //Reverse the sentence
+        //Create a variable to hold that.
+        String reversedSentence = sentence.reverse();
+        String newSentence;
 
-    //Create a Loop on List that will reverse the words
+        //Create a list to hold the words
+        List<String> word_list = reversedSentence.split(' ');
 
-    List<String> final_list = new List<String>();
-    for(String word : word_list) {
-        final_list.add(word.reverse());
+        //Create a Loop on List that will reverse the words
+
+        List<String> final_list = new List<String>();
+        for (String word : word_list) {
+            final_list.add(word.reverse());
+        }
+
+        //Now create a loop to assemble them.
+        newSentence = String.join(final_list, ' ');
+        
     }
-
-//Now create a loop to assemble them.
-    newSentence = String.join(final_list, ' ');
     return newSentence;
 }
