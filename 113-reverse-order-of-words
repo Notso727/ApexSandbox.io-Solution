@@ -16,6 +16,6 @@ public String reverseWordsInASentence(String sentence){
     }
 
 //Now create a loop to assemble them.
-    newSentence = final_list.toString();
+    newSentence = String.join(final_list, ' ');
     return newSentence;
 }
