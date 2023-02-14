@@ -13,10 +13,9 @@ public String reverseWordsInASentence(String sentence){
     List<String> final_list = new List<String>;
     for(String word : word_list) {
         final_list.add(word.reverse());
-
     }
 
 //Now create a loop to assemble them.
-    newSentence = word_list.toString();
+    newSentence = final_list.toString();
     return newSentence;
 }
