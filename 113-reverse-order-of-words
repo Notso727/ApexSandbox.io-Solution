@@ -9,7 +9,7 @@ public String reverseWordsInASentence(String sentence){
     //Create a list to hold the words of that sentence
     List<String> word_list = reversedSentence.split(' ');
 
-    //Create a temp list to collect the reverse the words and Loop on List 
+    //Create a temp list to collect the reverse of the words and Loop on List 
     List<String> final_list = new List<String>();
     for (String word : word_list) {
         final_list.add(word.reverse());
