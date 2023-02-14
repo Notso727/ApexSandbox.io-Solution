@@ -6,9 +6,9 @@ public String reverseWordsInASentence(String sentence){
     String newSentence;
 
 //Create a list to hold the words
-    List<String> word_list = reversedSentence.split(' \\');
+   // List<String> word_list = reversedSentence.split(' \\');
 
     //Now create a loop to assemble them.
-    newSentence = word_list.toString();
-    return newsentence;
+   // newSentence = word_list.toString();
+    return reversedSentence;
 }
