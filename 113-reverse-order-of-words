@@ -10,7 +10,7 @@ public String reverseWordsInASentence(String sentence){
 
     //Create a Loop on List that will reverse the words
     for( String word : word_list) {
-        word_list.add(word.reverse());
+        word.reverse();
     }
 
 //Now create a loop to assemble them.
