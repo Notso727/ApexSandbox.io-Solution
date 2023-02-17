@@ -18,10 +18,9 @@ public Integer nextPrime(Integer num) {
     if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) prime = false;
 
     //Create our logic using trial division method
-    do {
+    for (Integer i = 5; (i * i <= num); i += 6) {
         if (Math.mod(num, i) == 0 || Math.mod(num, i + 2) == 0) prime = false;
-        num++;
-    } while (prime = false);
+    }
     prime = true;
 
     return num;
