@@ -9,25 +9,20 @@ public Integer nextPrime(Integer num) {
     Boolean prime = false;
 
     //increment num to a minimum of num +1
-    //num = num + 1;
+    num = num + 1;
+    
+    //Check to see if the number is 2 or 3 first
+    if (num == 2 || num == 3) prime = true;
 
-    //Create a loop to loop from 1 to num + 1.  The next prime (num + 1) would be the answer
+    //Next check to see if num is a pos num or is divisible 2 or 3
+    if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) prime = false;
 
+    //Create our logic using trial division method
     do {
-        //Check to see if the number is 2 or 3 first
-        if (num == 2 || num == 3) prime = true;
-
-        //Next check to see if num is a pos num or is divisible 2 or 3
-        if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) prime = false;
-
-        //Create our logic using trial division method
-        for (Integer i = 5; (i * i <= num); i += 6) {
-            if (Math.mod(num, i) == 0 || Math.mod(num, i + 2) == 0) prime = false;
-        }
-        prime = true;
+        if (Math.mod(num, i) == 0 || Math.mod(num, i + 2) == 0) prime = false;
         num++;
-
     } while (prime = false);
+    prime = true;
 
     return num;
 
