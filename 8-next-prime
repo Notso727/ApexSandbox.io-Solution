@@ -16,7 +16,7 @@ public Integer nextPrime(Integer num) {
         //Check to see if the number is 2 or 3 first
         if (num == 2 || num == 3) {
             prime = true;
-            return num;
+            num = num - 1;
             } 
         
         //Next check to see if num is a pos num or is divisible 2 or 3
