@@ -5,26 +5,30 @@ public Integer nextPrime(Integer num) {
     greater than num.
      */
 
+
     //Create a return variable
     Boolean prime = false;
-
-    //increment num to a minimum of num +1
+    
     num = num + 1;
 
-    //Check to see if the number is 2 or 3 first
-    if (num == 2 || num == 3) {
-        prime = true;
-        //Next check to see if num is a pos num or is divisible 2 or 3
-    } else if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) {
-        prime = false;
-        //Create our logic using trial division method
-    } else {
-        for (Integer i = 5; (i * i <= num); i += 6) {
-            if (Math.mod(num, i) == 0 || Math.mod(num, i + 2) == 0) prime = false;
-        }
-        prime = true;
-    }
+    do {
 
-    return num;
+        //Check to see if the number is 2 or 3 first
+        if (num == 2 || num == 3) {
+            prime = true;
+            //Next check to see if num is a pos num or is divisible 2 or 3
+        } else if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) {
+            prime = false;
+            //Create our logic using trial division method
+        } else if (Math.mod(num, i) == 0 || Math.mod(num, i + 2) == 0) {
+            prime = false;
+            }
+            prime = true;
+
+            num++;
+        
+    } while (prime == false);
+
+    return num - 1;
 
 }
