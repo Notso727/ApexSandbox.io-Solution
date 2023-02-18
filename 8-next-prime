@@ -1,35 +1,51 @@
 public Integer nextPrime(Integer num) {
-    /*A prime number is a number greater than 1 that is not evenly divisible by any number greater than one and
-    smaller than itself. For example, 13 is a prime number because it is not evenly divisible by any number from
-    2 to 12.Implement the function nextPrime that takes as input an integer num and returns the smallest prime number
-    greater than num.
-     */
+/**
+ * Created by dalbright on 2/18/23.
+ */
+
+/*A prime number is a number greater than 1 that is not evenly divisible by any number greater than one and
+   smaller than itself. For example, 13 is a prime number because it is not evenly divisible by any number from
+   2 to 12.Implement the function nextPrime that takes as input an integer num and returns the smallest prime number
+   greater than num.
+    */
+
+// Method to test for primality
+
+public Boolean isPrime(Integer num) {
+
+//Check to see if the number is 2 or 3 first
+    if (num == 2 || num == 3) return true;
+
+//Next check to see if num is a pos num or is divisible 2 or 3
+    if (num <=1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) return false;
+
+//Create our logic using trial division method
+    for (Integer i = 5; (i * i <= num); i += 6){
+        if (Math.mod(num, i) == 0 || Math.mod(num, i + 2) == 0) return false;
+    }
+    return true;
+}
+
+// Method to test num and then loop
+
+public Integer nextPrime(Integer num) {
+
+    if (num <= 1) return 2;
 
     //Create a return variable
-    Boolean prime = false;
+    Integer prime = num;
+    Boolean found = false;
 
-    num = num + 1;
+    // Loop continuously until isPrime returns
+    // true for a number greater than n
+    while (!found) {
 
-    //Check to see if the number is 2 or 3 first
-    if (num == 2 || num == 3) return num;
+    prime++;
 
-    else {
-
-        do {
-            
-            //Next check to see if num is a pos num or is divisible 2 or 3
-            if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) {
-                prime = false;
-            }
-            prime = true;
-
-            num++;
-
-        } while (prime == false);
+    if (isPrime(prime)) found = true;
 
     }
 
-    return num - 1;
+    return prime;
 
 }
-
