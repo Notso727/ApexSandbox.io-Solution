@@ -8,27 +8,29 @@ public Integer nextPrime(Integer num) {
 
     //Create a return variable
     Boolean prime = false;
-    
+
     num = num + 1;
 
-    do {
+    //Check to see if the number is 2 or 3 first
+    if (num == 2 || num == 3) return num;
 
-        //Check to see if the number is 2 or 3 first
-        if (num == 2 || num == 3) {
-            prime = true;
-            num = num - 1;
-            } 
+    else {
         
-        //Next check to see if num is a pos num or is divisible 2 or 3
-        if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) {
-            prime = false;
+        do {
+
+            //Next check to see if num is a pos num or is divisible 2 or 3
+            if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) {
+                prime = false;
             }
-        prime = true;
+            prime = true;
 
-        num++;
-        
-    } while (prime == false);
+            num++;
+
+        } while (prime == false);
+    }
 
     return num - 1;
 
 }
+
+
