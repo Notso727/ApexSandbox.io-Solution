@@ -1,17 +1,11 @@
 public Integer nextPrime(Integer num) {
-/**
- * Created by dalbright on 2/18/23.
- */
+// Method to test for primality
 
 /*A prime number is a number greater than 1 that is not evenly divisible by any number greater than one and
    smaller than itself. For example, 13 is a prime number because it is not evenly divisible by any number from
    2 to 12.Implement the function nextPrime that takes as input an integer num and returns the smallest prime number
    greater than num.
     */
-
-// Method to test for primality
-
-public Boolean isPrime(Integer num) {
 
 //Check to see if the number is 2 or 3 first
     if (num == 2 || num == 3) return true;
