@@ -6,13 +6,13 @@ public Set<Integer> setIntersection(Set<Integer> set1, Set<Integer> set2) {
     Implement the method setIntersection that takes as input two sets of integers set1 and set2 and returns the
     intersection of the two sets. The method should not modify the original sets.
     */
-    
+
     // Create a set to collect the others
 
-    Set<Integer> set3 = new Set<Integer>();
-    set3.retainAll(set1);
-    set3.retainAll(set2);
-    
-    return set3;
-    
+    //Set<Integer> set3 = new Set<Integer>();
+    set2.retainAll(set1);
+    //set3.retainAll(set2);
+
+    return set2;
+
 }
