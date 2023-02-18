@@ -5,6 +5,9 @@ public Integer nextPrime(Integer num) {
     greater than num.
      */
 
+    //Create a return variable
+    Boolean prime = false;
+
     num = num + 1;
 
     //Check to see if the number is 2 or 3 first
@@ -13,9 +16,7 @@ public Integer nextPrime(Integer num) {
     else {
 
         do {
-            //Create a return variable
-            Boolean prime = false;
-
+            
             //Next check to see if num is a pos num or is divisible 2 or 3
             if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) {
                 prime = false;
@@ -25,7 +26,7 @@ public Integer nextPrime(Integer num) {
             num++;
 
         } while (prime == false);
-        
+
     }
 
     return num - 1;
