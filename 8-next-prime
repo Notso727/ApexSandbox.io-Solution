@@ -16,13 +16,15 @@ public Integer nextPrime(Integer num) {
         //Check to see if the number is 2 or 3 first
         if (num == 2 || num == 3) {
             prime = true;
-            //Next check to see if num is a pos num or is divisible 2 or 3
-        } else if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) {
+            } 
+        
+        //Next check to see if num is a pos num or is divisible 2 or 3
+        if (num <= 1 || Math.mod(num, 2) == 0 || Math.mod(num, 3) == 0) {
             prime = false;
-        }
-            prime = true;
+            }
+        prime = true;
 
-            num++;
+        num++;
         
     } while (prime == false);
 
