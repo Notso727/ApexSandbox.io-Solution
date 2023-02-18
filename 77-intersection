@@ -9,10 +9,10 @@ public Set<Integer> setIntersection(Set<Integer> set1, Set<Integer> set2) {
 
     // Create a set to collect the others
 
-    //Set<Integer> set3 = new Set<Integer>();
-    set2.retainAll(set1);
-    //set3.retainAll(set2);
+    Set<Integer> set3 = new Set<Integer>();
+    set3.retainAll(set1);
+    set3.retainAll(set2);
 
-    return set2;
+    return set3;
 
 }
