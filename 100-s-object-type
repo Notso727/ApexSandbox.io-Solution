@@ -4,14 +4,9 @@ public Boolean isTypeAccount(sObject record)
     Account object else it should return as false.
      */
 
-    // Create a boolean variable
-    Boolean accountTrue = false;
-
     //Check that List is not null first
     if(record == null) return false;
-
-    if (record instanceof Account) accountTrue = true;
-
-    return accountTrue;
+    
+    return record instanceof Account;
 
 }
