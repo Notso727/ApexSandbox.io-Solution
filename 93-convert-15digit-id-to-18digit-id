@@ -4,11 +4,14 @@ public String convert15to18DigitId(String fifteenDigit)
     with 18 digit salesforce Id. If the input string length is not equal to 15 digits, then return '-1'.
      */
 
+    //Check that the String is not null first
+    if(fifteenDigit == null) return null;
+
     if(fifteenDigit.length() != 15) return '-1';
 
     //If you set ID to a 15-character value, Apex converts the value to its 18-character representation. All invalid
     // ID values are rejected with a runtime exception.
-    
+
     Id id = fifteenDigit;
 
     return id;
