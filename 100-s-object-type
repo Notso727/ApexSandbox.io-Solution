@@ -1,0 +1,16 @@
+public Boolean isTypeAccount(sObject record)
+{
+    /* Implement the method isTypeAccount(), which accepts a sObject as input and returns a true if type of input is
+    Account object else it should return as false.
+     */
+    
+    // Create a boolean variable
+    Boolean accountTrue = false;
+
+    // Do a simple conditional to check if the recordId begins with 001
+    String recId = (String)record.get(record.Id);
+    if (recId.startsWith('001')) accountTrue = true;
+    
+    return accountTrue;
+    
+}
