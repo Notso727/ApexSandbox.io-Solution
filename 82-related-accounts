@@ -1,0 +1,16 @@
+public Set<Id> accountIds(List<Opportunity> opps) {
+    /* Implement the method accountIds that takes as input a list of Opportunity records, and returns a set
+    containing IDs of related accounts.
+     */
+
+    // Create a new Set to hold the Ids
+    Set<Id> relatedAccIds = new Set<Id>();
+
+    // Loop through the List to add related account Ids
+    for (Opportunity o : opps) {
+        relatedAccIds.add(Account.Id);
+    }
+
+return relatedAccIds;
+
+}
