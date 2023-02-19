@@ -1,0 +1,12 @@
+public List<String> getNamesInAscOrder(List<String> accountNames)
+{
+    /* Implement the method getNamesInAscOrder(), which accepts a list of fullnames as input and returns the list
+    sorted in ascending order. Use the standard library method to sort.
+     */
+
+    // Sort the list using list sort method
+
+    accountNames.sort();
+
+    return accountNames;
+}
