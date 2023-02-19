@@ -8,7 +8,7 @@ public Boolean isTypeAccount(sObject record)
     Boolean accountTrue = false;
 
     //Check that List is not null first
-    if(record == null) return null;
+    if(record == null) return false;
 
     // Do a simple conditional to check if the recordId begins with 001
     String recId = (String)record.get(record.Id);
