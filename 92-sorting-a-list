@@ -4,9 +4,10 @@ public List<String> getNamesInAscOrder(List<String> accountNames)
     sorted in ascending order. Use the standard library method to sort.
      */
 
-    // Sort the list using list sort method
+    //Check that List is not null first
+    if(accountNames == null) return null;
 
-    if accountNames 
+    // Sort the list using list sort method
 
     accountNames.sort();
 
