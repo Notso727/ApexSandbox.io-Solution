@@ -6,6 +6,8 @@ public List<String> getNamesInAscOrder(List<String> accountNames)
 
     // Sort the list using list sort method
 
+    if accountNames 
+
     accountNames.sort();
 
     return accountNames;
