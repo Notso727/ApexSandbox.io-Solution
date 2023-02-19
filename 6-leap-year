@@ -7,6 +7,7 @@ public Boolean isLeapYear(Integer year) {
 
     if((math.mod(year, 4) == 0) &&
         (math.mod(year, 100) != 0)) isValid = True;
+        
     //Now check to see if year is divisible by 100 and if it is, by 400
     else if(math.mod(year, 100) == 0){
         if(math.mod(year, 400) == 0)
