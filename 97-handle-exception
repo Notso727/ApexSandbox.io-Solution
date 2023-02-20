@@ -3,6 +3,9 @@ public String divide(Integer a, Integer b){
     and returns the result. If any exception occurs, the method should return the exception message.
      */
 
+    //Check that the String is not null first
+    if(a == null || b == null) return null;
+    
     Integer result = (a / b);
 
     String strDivide = String.valueOf(result);
