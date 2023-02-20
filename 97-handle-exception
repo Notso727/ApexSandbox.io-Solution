@@ -1,0 +1,12 @@
+public String divide(Integer a, Integer b){
+    /*Implement the method divide which takes two integers a and b as input, divides a by b using the / operator,
+    and returns the result. If any exception occurs, the method should return the exception message.
+     */
+
+    Integer result = (a / b);
+
+    String strDivide = String.valueOf(result);
+
+    return strDivide;
+
+}
