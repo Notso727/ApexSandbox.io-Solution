@@ -14,9 +14,10 @@ public String divide(Integer a, Integer b){
         result = (a / b);
         strDivide = String.valueOf(result);
     } catch (Exception e) {
-        throw e;
+        strException = String.valueOf(e);
     }
-    
-    return strDivide;
+
+    if (strException == null) return strDivide;
+    else return strDivide + ' ' + strException;
 
 }
