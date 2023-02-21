@@ -14,7 +14,7 @@ public String divide(Integer a, Integer b){
         result = (a / b);
         strDivide = String.valueOf(result);
     } catch (MathException e) {
-        strException = String.valueOf(e);
+        strException = e.getMessage();
     }
 
     if (strException == null) return strDivide;
