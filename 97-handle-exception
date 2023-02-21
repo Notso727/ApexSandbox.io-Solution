@@ -15,7 +15,7 @@ public String divide(Integer a, Integer b){
         strDivide = String.valueOf(result);
     } catch (Exception e) {
         //strException = e.getMessage();
-        strException = (String) (System.debug(e.getMessage()));
+        strException = (String.valueOf(System.debug(e.getMessage())));
     }
 
     if (strException == null) return strDivide;
