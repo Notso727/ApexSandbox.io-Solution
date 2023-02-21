@@ -4,22 +4,18 @@ public String divide(Integer a, Integer b){
      */
 
     //Check that the String is not null first
-    if(a == null || b == null) return null;
+    if (a == null || b == null) return null;
 
     String strDivide;
     String strException;
     Integer result;
 
-    try{
+    try {
         result = (a / b);
         strDivide = String.valueOf(result);
+        return strDivide;
     } catch (Exception e) {
-        //strException = e.getMessage();
-        //strException = System.debug(e.getMessage()));
-        System.debug(e.getMessage());
+        return e.getMessage();
     }
-
-    if (strException == null) return strDivide;
-    else return strDivide + ' ' + strException;
 
 }
