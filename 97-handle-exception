@@ -9,15 +9,15 @@ public String divide(Integer a, Integer b){
     String strDivide;
     String strException;
     Integer result;
-    
+
     try{
         result = (a / b);
         strDivide = String.valueOf(result);
     } catch (MathException m) {
         strException = m.getMessage();
-        
     }
 
-    return strDivide + strException;
+    if (strException = null) return strDivide;
+    else return strDivide + ' ' + strException;
 
 }
