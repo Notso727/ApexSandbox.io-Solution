@@ -5,11 +5,19 @@ public String divide(Integer a, Integer b){
 
     //Check that the String is not null first
     if(a == null || b == null) return null;
+
+    String strDivide;
+    String strException;
+    Integer result;
     
-    Integer result = (a / b);
+    try{
+        result = (a / b);
+        strDivide = String.valueOf(result);
+    } catch (MathException m) {
+        strException = m.getMessage();
+        
+    }
 
-    String strDivide = String.valueOf(result);
-
-    return strDivide;
+    return strDivide + strException;
 
 }
