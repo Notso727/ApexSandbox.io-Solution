@@ -13,7 +13,7 @@ public String divide(Integer a, Integer b){
     try{
         result = (a / b);
         strDivide = String.valueOf(result);
-    } catch (Exception e) {
+    } catch (MathException e) {
         strException = String.valueOf(e);
     }
 
