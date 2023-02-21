@@ -13,12 +13,12 @@ public String divide(Integer a, Integer b){
     try{
         result = (a / b);
         strDivide = String.valueOf(result);
-    } catch (MathException e) {
-        strException = e.getMessage();
+    //} catch (MathException e) {
+    //    strException = e.getMessage();
     } catch (Exception e) {
         strException = e.getMessage();
-    } catch (NullPointerException e) {
-        strException = e.getMessage();
+    //} catch (NullPointerException e) {
+     //   strException = e.getMessage();
     }
 
     if (strException == null) return strDivide;
