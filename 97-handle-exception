@@ -3,13 +3,8 @@ public String divide(Integer a, Integer b){
     and returns the result. If any exception occurs, the method should return the exception message.
      */
 
-    String strDivide;
-    Integer result;
-
     try {
-        result = (a / b);
-        strDivide = String.valueOf(result);
-        return strDivide;
+        return String.valueOf(a/b);
     } catch (Exception e) {
         return e.getMessage();
     }
