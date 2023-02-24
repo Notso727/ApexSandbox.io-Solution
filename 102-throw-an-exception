@@ -18,15 +18,14 @@ Boolean flag = false;
     try {
         for (Account acc : accounts) {
             if (acc.BillingCity != null) return accounts;
-            if (acc == null) return null;
+            if (acc.BillingCity == null) throw new AccountException('accounts
+            should not be null')
         }
     } catch (IllegalArgumentException e) {
-        return e.setMessage('accounts should not be null');
+        throw new AccountException();
     }
-        
-        return accounts;
 
-}
+        return accounts;
 
    //do not remove the following custom-defined exception
 public class AccountException extends Exception {}
