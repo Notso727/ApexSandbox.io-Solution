@@ -8,7 +8,9 @@ public Set<Id> accountIds(List<Opportunity> opps) {
 
     // Loop through the List to add related account Ids
     for (Opportunity o : opps) {
-        relatedAccIds.add(o.AccountId);
+        if(o.accountId != null){
+            relatedAccIds.add(o.AccountId);
+        }
     }
 
 return relatedAccIds;
