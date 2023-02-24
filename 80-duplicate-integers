@@ -1,0 +1,10 @@
+public Boolean containsDuplicates(List<Integer> nums) {
+    /* Implement the method containsDuplicates that takes as input a list of integers, returns true if the list has
+    more than one occurence of the same number, and returns false if every element in the list is unique.
+     */
+
+    //Create a new Set and add the List.
+    Set<Integer> numsCompare = new Set<Integer>();
+    return numsCompare.containsAll(nums);
+    
+}
