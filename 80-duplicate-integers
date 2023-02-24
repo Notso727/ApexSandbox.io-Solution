@@ -11,6 +11,4 @@ public Boolean containsDuplicates(List<Integer> nums) {
     if(nums == null || numsCompare.size() == 0) return false;
     return !numsCompare.equals(nums);
 
-    return true;
-
 }
