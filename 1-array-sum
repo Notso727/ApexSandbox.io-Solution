@@ -4,12 +4,12 @@ public static Integer arraySum(List<Integer> numbers) {
      */
 
     //Create a variable to capture the sum
-    Integer sum = numbers.get(1);
+    Integer sum = numbers[0];
 
     //Loop over the list and add it to another variable
     for(Integer num : numbers){
         sum += num;
-        
+
     }
 
     return sum;
