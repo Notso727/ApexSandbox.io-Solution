@@ -19,7 +19,7 @@ Boolean flag = false;
         for (Account acc : accounts) {
             if (acc.BillingCity != null) return accounts;
             if (acc.BillingCity == null) throw new AccountException('accounts
-            should not be null')
+            should not be null');
         }
     } catch (IllegalArgumentException e) {
         throw new AccountException();
