@@ -4,7 +4,10 @@ public static Integer arraySum(List<Integer> numbers) {
      */
 
     //Create a variable to capture the sum
-    Integer sum;
+    Integer sum = numbers[0];
+
+    //If the list is empty return 0
+    if(numbers.size() == 0) return 0;
 
     //Loop over the list and add it to another variable
     for(Integer num : numbers){
