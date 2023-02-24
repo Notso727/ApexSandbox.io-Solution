@@ -5,7 +5,8 @@ public Boolean containsDuplicates(List<Integer> nums) {
 
     //Create a new Set and add the List.
     Set<Integer> numsCompare = new Set<Integer>();
-    
+    numsCompare.addAll(nums);
+
     //Now check if the List and Set are the same but first also check for null.
     if(nums == null) return false;
     return numsCompare.containsAll(nums);
