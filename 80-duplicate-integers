@@ -7,8 +7,7 @@ public Boolean containsDuplicates(List<Integer> nums) {
     Set<Integer> numsCompare = new Set<Integer>();
     numsCompare.addAll(nums);
 
-    //Now check if the List and Set are the same but first also check for null.
-    if(nums == null || numsCompare.size() == 0 || numsCompare.size() == 1) return false;
-    return !numsCompare.equals(nums);
+    //Sine a Set can't have duplicates, check if the List and Set are the same size
+    if(nums.size() == numsCompare.size()) return true;
 
 }
