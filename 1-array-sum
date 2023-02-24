@@ -3,18 +3,18 @@ public static Integer arraySum(List<Integer> numbers) {
     and returns the sum of all numbers in the list.
      */
 
-    Integer sum;
+    Integer sum = 0;
 
     //If the list is empty return 0
     if(numbers.size() > 0) {
         //Create a variable to capture the sum
-        //sum = numbers[0];
+        sum = numbers[0];
         //Loop over the list and add it to another variable
         for(Integer num : numbers) {
             sum += num;
         }
         
-    } else sum = 0;
+    } 
 
     return sum;
 }
