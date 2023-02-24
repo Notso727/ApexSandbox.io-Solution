@@ -21,7 +21,7 @@ Boolean flag = false;
             if (acc == null) return null;
         }
     } catch (IllegalArgumentException e) {
-        //return e.getMessage();
+        return e.setMessage('accounts should not be null');
     }
         
         return accounts;
