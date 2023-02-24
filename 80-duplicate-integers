@@ -10,4 +10,5 @@ public Boolean containsDuplicates(List<Integer> nums) {
     //Sine a Set can't have duplicates, check if the List and Set are the same size
     if(nums.size() == numsCompare.size()) return true;
 
+    return false;
 }
