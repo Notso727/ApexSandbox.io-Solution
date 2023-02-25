@@ -1,0 +1,18 @@
+public List<Integer> evenNumbers(Integer n) {
+    /*Given a non-zero positive integer n, return a list of the first n non-zero positive even numbers,
+    ordered ascending.
+
+    Example: evenNumbers(5) returns a list containing the numbers 2, 4, 6, 8, 10.
+    */
+
+    //Create a List variable
+    List<Integer> numbers = new List<Integer>();
+
+    //Create a loop to iterate n times over even numbers and add them to a list.
+    for(Integer i = 0, j = 0; i <= n; j + 2) {
+        numbers.add(j);
+    }
+
+    return numbers;
+
+}
