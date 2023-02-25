@@ -6,6 +6,6 @@ public static Integer findLargest(List<Integer> nums) {
     //To find the largest integer, we need to sort ascending and then use size to get the last integer in the list
     nums.sort();
     Integer x = nums.size();
-    return nums.get(x);
+    return nums.get(x - 1);
     
 }
