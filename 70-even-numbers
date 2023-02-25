@@ -9,7 +9,7 @@ public List<Integer> evenNumbers(Integer n) {
     List<Integer> numbers = new List<Integer>();
 
     //Create a loop to iterate n times over even numbers and add them to a list.
-    for(Integer i = 0, j = 0; i <= n; i++) {
+    for(Integer i = 1, j = 0; i <= n; i++) {
         numbers.add(j);
         j = j + 2;
     }
