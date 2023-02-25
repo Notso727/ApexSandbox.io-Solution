@@ -10,8 +10,8 @@ public List<Integer> evenNumbers(Integer n) {
 
     //Create a loop to iterate n times over even numbers and add them to a list.
     for(Integer i = 0, j = 0; i <= n; i++) {
-        j = j + 2;
         numbers.add(j);
+        j = j + 2;
     }
 
     return numbers;
