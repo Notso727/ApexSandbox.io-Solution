@@ -1,0 +1,18 @@
+public List<Integer> positiveIntegers(List<Integer> numbers) {
+    /*A positive integer is defined as an integer greater than zero. Implement the method positiveIntegers that
+    takes as input a list of integers numbers, and returns a new list with non-positive integers removed.
+    */
+
+    //Create a List to collect the pos numbers as we iterate through
+    List<Integer> posNumbers = new List<Integer>();
+
+    for (Integer num : numbers){
+        if( num > 0 ) {
+            posNumbers.add(num);
+            posNumbers.sort();
+        }
+    }
+
+    return posNumbers;
+
+}
