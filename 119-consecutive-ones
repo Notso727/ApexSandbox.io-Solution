@@ -1,0 +1,22 @@
+public Integer maxConsecutiveOnes(Integer[] numbers) {
+    /* Given a List of Integers containing only binary numbers (0 and 1), return the maximum number of consecutive
+    1s appearing in the List.
+     */
+
+    //Create a List to collect the 'ones' as we iterate through and an
+    List<Integer> ones = new List<Integer>();
+    Integer answer = 0;
+
+    for (Integer num : numbers ){
+        if( num == 1 ) {
+            ones.add(num);
+        } else ones.clear();
+        if( ones.size() > answer ){
+            answer = ones.size();
+        }
+
+    }
+
+    return answer;
+
+}
