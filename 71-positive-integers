@@ -9,7 +9,6 @@ public List<Integer> positiveIntegers(List<Integer> numbers) {
     for (Integer num : numbers){
         if( num > 0 ) {
             posNumbers.add(num);
-            posNumbers.sort();
         }
     }
 
