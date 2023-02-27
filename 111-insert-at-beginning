@@ -2,7 +2,9 @@ public void insertAtStart(String cityName, List<String> cities) {
     /*Implement a method that would take an element and a List of elements as arguments and return the same
     List with the element inserted at the 0th position.
      */
- 
-    cities.add(0, cityName);
-    
+
+    if( cities == null){
+        cities.add(cityName);
+    } else cities.add(0, cityName);
+
 }
