@@ -3,7 +3,8 @@ public void insertAtStart(String cityName, List<String> cities) {
     List with the element inserted at the 0th position.
      */
 
-    if( cities.size() == 0){
+    //
+    if( cities.isEmpty(){
         cities.add(cityName);
     } else cities.add(0, cityName);
 
