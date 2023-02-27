@@ -3,7 +3,7 @@ public void insertAtStart(String cityName, List<String> cities) {
     List with the element inserted at the 0th position.
      */
 
-    //
+    //If the list is empty you can't add to a specific index so just add
     if( cities.isEmpty() ){
         cities.add(cityName);
     } else cities.add(0, cityName);
