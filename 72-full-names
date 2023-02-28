@@ -7,7 +7,7 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
     //Create a new Loop variable
     List<String> concName = new List<String>();
 
-    if (firstNames.isEmpty() || lastNames.isEmpty()) {
+    if (firstNames.isEmpty() && lastNames.isEmpty()) {
         concName.add(firstNames);
     }
     //Create a Loop and iterate over it to grab and concatenate a String from each list into a new Loop
