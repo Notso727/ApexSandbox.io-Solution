@@ -1,0 +1,25 @@
+public Boolean companionPlants(List<String> plants) {
+    /* Some plants are considered companion plants. They grow better when planted next to each other. For the purpose
+    of this problem, we consider the following plants to be companions: lettuce and cucumbers, lettuce and onions,
+    onions and carrots, and onions and tomatoes. The same plants planted next to each other are not considered
+    companions.
+
+    Write a function isCompanion that takes as input a list of plants being planted in a row. Return true only if
+    every plant in the list is planted next to a companion and return false otherwise.
+    */
+
+    //Loop over the List and check if the current element is a companion to the next
+
+    //Create a Boolean flag variable
+    Boolean results = false;
+
+    //Creat a Loop for the List
+    for(Integer i = 1; i < plants.size(); i++){
+        //Create a conditional to check if they are companions
+        if(plants.get(i) == 'lettuce' && (plants.get(i + 1) == 'cucumbers' || plants.get(i + 1) == 'onions' ) results = true;
+        if(plants.get(i) == 'onions' && (plants.get(i + 1) == 'carrots' || plants.get(i + 1) == 'tomatoes' ) results = true;
+    }
+
+    return results;
+
+}
