@@ -12,6 +12,7 @@ public Boolean companionPlants(List<String> plants) {
 
     //Create a Boolean flag variable
     Boolean results = false;
+     
     //First, check to see if the list is empty and return true
     if (plants.isEmpty()) {
         results = true;
@@ -35,6 +36,6 @@ public Boolean companionPlants(List<String> plants) {
 
     }
 
-        return results;
+    return results;
 
 }
