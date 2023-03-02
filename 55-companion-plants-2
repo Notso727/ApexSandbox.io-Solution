@@ -14,28 +14,25 @@ public Boolean companionPlants(List<String> plants) {
     Boolean results = false;
 
     //First, check to see if the list is empty and return true
-    if (plants.isEmpty()) {
-        results = true;
+    if (plants.isEmpty()) results = true;
 
         //Creat a Loop for the List
-        for (Integer i = 0; i < (plants.size() - 1); i++) {
-            //Create a conditional to check if they are companions
-            if        (plants.get(i) == 'lettuce' && (plants.get(i + 1) == 'cucumbers' || plants.get(i + 1) == 'onions')) {
-                results = true;
-            } else if (plants.get(i) == 'onions' && (plants.get(i + 1) == 'carrots' || plants.get(i + 1) == 'tomatoes' || plants.get(i + 1) == 'lettuce')) {
-                results = true;
-            } else if (plants.get(i) == 'cucumbers' && (plants.get(i + 1) == 'lettuce')) {
-                results = true;
-            } else if (plants.get(i) == 'carrots' && (plants.get(i + 1) == 'onions')) {
-                results = true;
-            } else if (plants.get(i) == 'tomatoes' && (plants.get(i + 1) == 'onions')) {
-                results = true;
-            }
-
+    for (Integer i = 0; i < (plants.size() - 1); i++) {
+        //Create a conditional to check if they are companions
+        if        (plants.get(i) == 'lettuce' && (plants.get(i + 1) == 'cucumbers' || plants.get(i + 1) == 'onions')) {
+            results = true;
+        } else if (plants.get(i) == 'onions' && (plants.get(i + 1) == 'carrots' || plants.get(i + 1) == 'tomatoes' || plants.get(i + 1) == 'lettuce')) {
+            results = true;
+        } else if (plants.get(i) == 'cucumbers' && (plants.get(i + 1) == 'lettuce')) {
+            results = true;
+        } else if (plants.get(i) == 'carrots' && (plants.get(i + 1) == 'onions')) {
+            results = true;
+        } else if (plants.get(i) == 'tomatoes' && (plants.get(i + 1) == 'onions')) {
+            results = true;
         }
 
     }
-
+    
     return results;
 
 }
