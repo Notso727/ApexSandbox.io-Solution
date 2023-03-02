@@ -18,7 +18,7 @@ public Boolean companionPlants(List<String> plants) {
         //Create a conditional to check if they are companions
         if (plants.isEmpty()) {
             results = true;
-            break
+            break;
         } else if (plants.get(i) == 'lettuce' && (plants.get(i + 1) == 'cucumbers' || plants.get(i + 1) == 'onions')) {
             results = true;
         //} else if (plants.get(i) == 'onions' && (plants.get(i + 1) == 'carrots' || plants.get(i + 1) == 'tomatoes' || plants.get(i + 1) == 'lettuce')) {
