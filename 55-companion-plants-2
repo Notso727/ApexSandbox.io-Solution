@@ -14,8 +14,8 @@ public Boolean companionPlants(List<String> plants) {
     Boolean results = false;
 
     //First, check to see if the list is empty and return true
-    if (plants.isEmpty()) {
-        results = true;
+    //if (plants.isEmpty()) {
+    //    results = true;
   
          for (Integer i = 0; i < (plants.size() - 1); i++) {  
              if (plants.get(i) == 'tomatoes' && (plants.get(i + 1) == 'onions')) {
@@ -23,7 +23,7 @@ public Boolean companionPlants(List<String> plants) {
             }
 
         }
-    }
+    //}
 
     return results;
 
