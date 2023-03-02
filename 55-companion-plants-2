@@ -26,8 +26,8 @@ public Boolean companionPlants(List<String> plants) {
                 results = true;
             } else if (plants.get(i) == 'cucumbers' && (plants.get(i + 1) == 'lettuce')) {
                 results = true;
-            } else if (plants.get(i) == 'carrots' && (plants.get(i + 1) == 'onions')) {
-                results = true;
+            //} else if (plants.get(i) == 'carrots' && (plants.get(i + 1) == 'onions')) {
+            //    results = true;
             } else if (plants.get(i) == 'tomatoes' && (plants.get(i + 1) == 'onions')) {
                 results = true;
             }
