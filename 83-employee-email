@@ -4,8 +4,10 @@ public String employeeEmail(Map<String, String> employeeIdToEmail, String employ
     ID is not found, return 'info@apexsandbox.io'.
      */
 
-    if( employeeIdToEmail.get(employeeId) == null ) return 'info@apexsandbox.io';
+    //Check to see if the employee Id is null and if it is, return standard email
+    if(employeeIdToEmail.containsKey(employeeId)) return employeeIdToEmail.get(employeeId);
 
-    return employeeIdToEmail.get(employeeId);
+    //Else, use a get to return the email
+    return 'info@apexsandbox.io';
 
 }
