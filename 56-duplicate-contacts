@@ -6,16 +6,10 @@ public Boolean duplicateContacts(Contact c1, Contact c2) {
     returns true if they are duplicates, and returns false otherwise.
     */
 
-    //Create a variable for the Boolean
-    Boolean duplicate = true;
-
     //Check for null or empty values
     //Create a conditional to check if the contact emails or phones match
     if(c1.email != null || c2.email != null || c1.phone != null || c2.phone != null && 
-    (c1.email != c2.email) || (c1.phone != c2.phone)) duplicate = false;
-    
-    
-
-    return duplicate;
+    (c1.email != c2.email) || (c1.phone != c2.phone)) return false;
+    else return true;
 
 }
