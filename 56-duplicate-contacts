@@ -1,8 +1,8 @@
 public Boolean duplicateContacts(Contact c1, Contact c2) {
-    /*For this problem, we consider two Contacts as duplicates if they have the same phone 
-    number or the same email address. 
-    
-    Implement the method duplicateContacts that takes as input two Contact records c1 and c1, 
+    /*For this problem, we consider two Contacts as duplicates if they have the same phone
+    number or the same email address.
+
+    Implement the method duplicateContacts that takes as input two Contact records c1 and c1,
     returns true if they are duplicates, and returns false otherwise.
     */
 
@@ -12,10 +12,11 @@ public Boolean duplicateContacts(Contact c1, Contact c2) {
     //Check for null or empty values
     //Create a conditional to check if the contact emails or phones match
     if(c1.email != null || c2.email != null || c1.phone != null || c2.phone != null) {
-        duplicate =false;
-        if((c1.email != c2.email) || (c1.phone != c2.phone)) duplicate = true;
+        if((c1.email == c2.email) || (c1.phone == c2.phone)){
+            duplicate = true;
+        }
     }
-    
+
     return duplicate;
 
 }
