@@ -7,13 +7,12 @@ public Boolean duplicateContacts(Contact c1, Contact c2) {
     */
 
     //Create a variable for the Boolean
-    Boolean duplicate = false;
+    Boolean duplicate = true;
 
     //Check for null or empty values
     //Create a conditional to check if the contact emails or phones match
     if(c1.email != null || c2.email != null || c1.phone != null || c2.phone != null) {
-        if(c1.email == c2.email) duplicate = true;
-        else if(c1.phone == c2.phone) duplicate = true;
+        if(c1.email != c2.email) && (c1.phone != c2.phone) duplicate =  false;
     }
     
 
