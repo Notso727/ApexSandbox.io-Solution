@@ -8,24 +8,18 @@ public Boolean duplicateContacts(Contact c1, Contact c2) {
 
     //Check for null or empty values
     //Create a conditional to check if the contact emails or phones match
-    i// Check if the phone numbers are the same
+    // Check if the phone numbers are the same
 
     if (c1.Phone.trim().equalsIgnoreCase(c2.Phone.trim())) {
-
         return true;
-
     }
 
     // Check if the email addresses are the same
 
     if (c1.Email.trim().equalsIgnoreCase(c2.Email.trim())) {
-
         return true;
-
     }
 
     // If neither phone number nor email address are the same, the contacts are not duplicates
-
     return false;
-
 }
