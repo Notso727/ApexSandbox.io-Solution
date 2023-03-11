@@ -1,0 +1,9 @@
+public Boolean sameParent(Contact c, Opportunity opp) {
+        /*Implement the method sameParent that takes as input an opportunity opp and a contact c, and returns true if both the 
+        opportunity and contact have the same parent account.
+        */
+
+        //Check if the Contact and Opportunity have the AccountId value
+        return(c.AccountId == opp.AccountId);
+
+}
