@@ -5,6 +5,6 @@ public Boolean sameParent(Account acc, Contact con, Opportunity opp) {
 
     //Check for null values first
     //Then check if the Contact and Opportunity have the same AccountId value
-    return(acc.Id != null && acc.AccountId == c.AccountId == opp.AccountId);       
+    return(acc.Id != null && acc.Id == c.AccountId == opp.AccountId);       
 
 }
