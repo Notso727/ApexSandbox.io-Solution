@@ -12,4 +12,6 @@ public void setParent(Account acc, Contact con, Opportunity opp) {
             opp.AccountId = acc.Id;
         }
         
+        // True  || Short Circuit Evals to True
+        // False && Short Circuit Evals to False
     }
