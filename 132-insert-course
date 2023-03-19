@@ -13,6 +13,7 @@ public Id insertCourse(String name, String details, Integer credits) {
     //Conditional that Credits__c field has the correct values or returns null
     if(credits != 1 && credits != 2 && credits != 3 && credits != 4) return null;
     else {
+        course.name = name;
         course.apxio__Course_Details__c = details;
         course.apxio__Credits__c = String.valueOf(credits);
         }
