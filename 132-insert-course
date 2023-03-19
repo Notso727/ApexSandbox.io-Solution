@@ -14,9 +14,9 @@ public Id insertCourse(String name, String details, Integer credits) {
     if(credits != 1 && credits != 2 && credits != 3 && credits != 4) return null;
     else {
         course.apxio__Course_Details__c = details;
-        course.apxio__Credits__c = credits;
+        course.apxio__Credits__c = String.valueOf(credits);
         }
-    
+
     //Insert the new course
     insert course;
 
