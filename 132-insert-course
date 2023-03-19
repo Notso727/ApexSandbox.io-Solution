@@ -8,7 +8,7 @@ public Id insertCourse(String name, String details, Integer credits) {
      */
 
     //Create a new sObject of apxio__Course__c with the required fields
-    apxio__Course__c course = new apxio__Course__c;
+    apxio__Course__c course = new apxio__Course__c();
 
     //Conditional that Credits__c field has the correct values or returns null
     if(credits != 1 && credits != 2 && credits != 3 && credits != 4) return null;
