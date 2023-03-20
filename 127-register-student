@@ -16,12 +16,11 @@ public String registerStudent(String name, String phone, String email) {
     insert newStudent;
 
     //Now run a SQOL to pull the registration Number
-    apxio__Student__c studentToGet = [SELECT apxio__Registration_Number__c
+    apxio__Student__c studentToGet = [SELECT Id, apxio__Registration_Number__c
                                         FROM apxio__Student__c
-                                       WHERE name = :newStudent.Id
-                                       LIMIT 1];
+                                       WHERE name = :newStudent.Id;
 
     //Return Id
-    return studentToGet.apxio__Registration_Number__c ;
+    return studentToGet.apxio__Registration_Number__c;
 
 }
