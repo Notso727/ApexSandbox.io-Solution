@@ -18,7 +18,7 @@ public String registerStudent(String name, String phone, String email) {
     //Now run a SQOL to pull the registration Number
     apxio__Student__c studentToGet = [SELECT apxio__Registration_Number__c 
                                         FROM apxio__Student__c 
-                                       WHERE name = name 
+                                       WHERE name = :newStudent.name
                                        LIMIT 1];
 
     //Return Id
