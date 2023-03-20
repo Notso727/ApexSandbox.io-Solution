@@ -7,18 +7,21 @@ public String registerStudent(String name, String phone, String email) {
     //Create a new sObject of apxio__Course__c with the required fields
     apxio__Student__c newStudent = new apxio__Student__c();
 
-    //Conditional that Credits__c field has the correct values or returns null
-    //if(credits != 1 && credits != 2 && credits != 3 && credits != 4) return null;
-    //else {
+   //Implement the newStudent with the inputs for name, phone and email
     newStudent.name = name;
     newStudent.apxio__Phone__c = phone;
     newStudent.apxio__Email__c = email;
-    //    }
 
     //Insert the new course
     insert newStudent;
 
+    //Now run a SQOL to pull the registration Number
+    apxio__Student__c studentToGet = [SELECT apxio__Registration_Number__c 
+                                        FROM apxio__Student__c 
+                                       WHERE name = name 
+                                       LIMIT 1];
+
     //Return Id
-    return newStudent.apxio__Registration_Number__c;
+    return studentToGet;
 
 }
