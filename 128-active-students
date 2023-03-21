@@ -4,9 +4,9 @@ public List<apxio__Student__c> selectActiveStudents() {
      */
 
     //Conduct a SOQL query to extract the values
-    List<apxio__Student__c> studentToGet = [SELECT apxio__Registration_Number__c
-                                              FROM apxio__Student__c
-                                             WHERE apxio__Active__c = TRUE];
+    List<apxio__Student__c> studentToGet = [SELECT Id, name
+                                            FROM apxio__Student__c
+                                            WHERE apxio__Active__c = TRUE];
 
     return studentToGet;
 
