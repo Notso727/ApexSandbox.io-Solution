@@ -1,0 +1,13 @@
+public List<apxio__Student__c> selectActiveStudents() {
+    /*Implement the method selectActiveStudents that returns a list of all apxio__Student__c records with
+    apxio__Active__c field checked. Make sure the students have a value in the Id and Name fields.
+     */
+
+    //Conduct a SOQL query to extract the values
+    List<apxio__Student__c> studentToGet = [SELECT apxio__Registration_Number__c
+                                              FROM apxio__Student__c
+                                             WHERE apxio__Active__c = TRUE];
+
+    return studentToGet;
+
+}
