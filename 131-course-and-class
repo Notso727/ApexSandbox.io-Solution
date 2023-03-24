@@ -21,11 +21,12 @@ public void createCourseAndClass(String name, String description) {
 
     //Conduct a SOQL to get the ID of the course
     apxio__Course__c courseToGet = [SELECT Id
-                                      FROM apxio__Course__c
-                                     WHERE Id = :course.Id];
+    FROM apxio__Course__c
+    WHERE Id = :course.Id];
 
     //Create the truncated text to fit in the 255 character limit
-    String shortText = description.substring(0, 254);                                
+    Integer num = 254
+    String shortText = description.substring(0, num);
 
     //Create a class
     apxio__Class__c newClass = new apxio__Class__c(
