@@ -14,8 +14,8 @@ public void createCourseAndClass(String name, String description) {
     //Create a new course
     apxio__Course__c course = new apxio__Course__c(
             apxio__Course_Details__c = description,
-            name = name,
-    )
+            name = name
+            );
     //insert the course
     insert course;
     
