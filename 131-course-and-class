@@ -25,7 +25,7 @@ public void createCourseAndClass(String name, String description) {
     WHERE Id = :course.Id];
 
     //Create the truncated text to fit in the 255 character limit
-    Integer num = 254
+    Integer num = 254;
     String shortText = description.substring(0, num);
 
     //Create a class
