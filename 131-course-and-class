@@ -27,7 +27,6 @@ public void createCourseAndClass(String name, String description) {
     //Create the truncated text to fit in the 255 character limit
     String shortText = description.left(255);
 
-/*
     //Create a class
     apxio__Class__c newClass = new apxio__Class__c(
             apxio__Course__c = courseToGet.Id,
@@ -37,5 +36,5 @@ public void createCourseAndClass(String name, String description) {
 
     //insert child class
     insert newClass;
-*/
+
 }
