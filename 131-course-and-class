@@ -26,7 +26,7 @@ public void createCourseAndClass(String name, String description) {
 
     //Create a class
     apxio__Class__c newClass = new apxio__Class__c(
-            apxio__Course = courseToGet.Id
+            apxio__Course = courseToGet.Id,
             apxio__Class_Description__c = description,
             name = name
     );
