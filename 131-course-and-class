@@ -30,7 +30,7 @@ public void createCourseAndClass(String name, String description) {
     //Create a class
     apxio__Class__c newClass = new apxio__Class__c(
             apxio__Course__c = courseToGet.Id,
-            apxio__Description__c = shortText,
+            //apxio__Description__c = shortText,
             name = name
     );
 
