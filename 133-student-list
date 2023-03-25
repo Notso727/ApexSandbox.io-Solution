@@ -10,6 +10,7 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
         //Create a List to collect the other lists
         List<apxio__Student__c> newStudents = new List<apxio__Student__c>();
 
+        /*
         //Loop over the Lists and combine into a Student records List
         for(snames : studentNames) {
             if(studentNames != null){
@@ -22,6 +23,7 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
             newStudents.apxio__Email__c = semails;
             }
         }
+        */
 
         //Insert the final List
         Insert newStudents;
