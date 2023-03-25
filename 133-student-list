@@ -17,13 +17,13 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
             newStudents.Name = snames;
             }
         }
-
+        */
         for(semails : studentEmails) {
             if(studentEmails != null){
             newStudents.apxio__Email__c = semails;
             }
         }
-        */
+        
 
         //Insert the final List
         Insert newStudents;
