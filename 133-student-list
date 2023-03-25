@@ -19,9 +19,9 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
         }
         */
         for(e : studentEmails) {
-            if(e != null){
-            newStudents.apxio__Email__c.add(e);
-            }
+            //if(e != null){
+            //newStudents.apxio__Email__c.add(e);
+            //}
         }
         
 
