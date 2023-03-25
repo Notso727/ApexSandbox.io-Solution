@@ -13,7 +13,7 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
         //Loop over the Lists and combine into a Student records List
         for(snames : studentNames) {
             if(studentNames != null){
-            newStudents.name = snames;
+            newStudents.Name = snames;
             }
         }
 
