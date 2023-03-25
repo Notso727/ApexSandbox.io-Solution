@@ -12,7 +12,7 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
 
         //Loop over the records and create a new record with the names and emails
         for(Integer i = 0; i < studentEmails.size(); i ++ ) {
-            apxio__Student__c s = new apxio__Student__c()
+            apxio__Student__c s = new apxio__Student__c();
             s.Name          = studentNames[i];
             s.apxio__Email__c = studentEmails[i];
         
