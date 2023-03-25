@@ -17,7 +17,7 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
             }
         }
 
-        for(semails : studentEmails {
+        for(semails : studentEmails) {
             if(studentEmails != null){
             newStudents.apxio__Email__c = semails;
             }
