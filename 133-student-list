@@ -8,23 +8,17 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
         */
 
         //Create a List to collect the other lists
-        List<apxio__Student__c> newStudents = new List<apxio__Student__c>();
+        List<apxio__Student__c > newStudents = new List<apxio__Student__c > ();
 
-        /*
-        //Loop over the Lists and combine into a Student records List
-        for(snames : studentNames) {
-            if(studentNames != null){
-            newStudents.Name = snames;
-            }
-        }
-        */
-        for(e : studentEmails) {
-            //if(e != null){
-            //newStudents.apxio__Email__c.add(e);
-            //}
+        //Loop over the records and create a new record with the names and emails
+        for( i = 0; i < studentEmails.size(); i ++ ) {
+            apxio__Student__c s = new apxio__Student__c(
+                s.Name            = studentNames[i],
+                s.apxio__Email__c = studentEmails[i],
+            )
+            newStudents.add(s);
         }
         
-
         //Insert the final List
         Insert newStudents;
     }
