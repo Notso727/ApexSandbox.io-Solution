@@ -1,4 +1,29 @@
 public void insertStudents(List<String> studentNames, List<String> studentEmails) {
+        /*The method insertStudents takes as input two lists of strings studentNames and studentEmails. The two lists will 
+        always have the same size, with studentNames[i] and studentEmails[i] (for any in-range value of i) representing a 
+        student's name and email.
+
+        Write an implementation of the method that creates apxio__Student__c records for each entry in the lists with the Name and 
+        apxio__Email__c fields filled out.
+        */
+
+        //Create a List to collect the other lists
+        List<apxio__Student__c > newStudents = new List<apxio__Student__c > ();
+
+        //Loop over the records and create a new record with the names and emails
+        for(Integer i = 0; i < studentEmails.size(); i ++ ) {
+            apxio__Student__c s = new apxio__Student__c();
+            s.Name          = studentNames[i];
+            s.apxio__Email__c = studentEmails[i];
+        
+            newStudents.add(s);
+        }
+        
+        //Insert the final List
+        Insert newStudents;
+    }
+
+    /* public void insertStudents(List<String> studentNames, List<String> studentEmails) {
     List<apxio__Student__c> studentsToInsert = new List<apxio__Student__c>();
 
     for (Integer i = 0; i < studentEmails.size(); i++) {
@@ -17,3 +42,4 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
         }
     }
 }
+*/
