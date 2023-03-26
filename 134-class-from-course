@@ -19,7 +19,7 @@ public Id classFromCourse(String courseName) {
 
             for(Integer i = 0; i < course.size(); i++){
                 apxio__Class__c classNew = new apxio__Class__c(
-                  classNew.name = courseName,
+                  classNew.Name = courseName,
                   classNew.apxio__Course__c  = course.Id
                 );
                 courseClass.add(classNew);
