@@ -8,8 +8,8 @@ public Id classFromCourse(String courseName) {
 
          //Conduct a query to find the Course with Coursname and get it's ID
          apxio__Course__c  course = [SELECT Id
-                                                            FROM apxio__Course__c
-                                                            WHERE Name = courseName];
+                                    FROM apxio__Course__c
+                                    WHERE Name = courseName];
             
 
          //If Course found, create an apxio__Class__c record  with the Course ID as the parentID
@@ -17,5 +17,5 @@ public Id classFromCourse(String courseName) {
          //Insert the new Class
 
          //return  course
-         return course.Id;
+         //return course.Id;
     }
