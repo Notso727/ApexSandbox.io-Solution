@@ -8,24 +8,26 @@ public Id classFromCourse(String courseName) {
 
          //Conduct a query to find the Course with Coursname and get it's ID
          apxio__Course__c  course = [SELECT Id,  name
-                                       FROM apxio__Course__c
-                                      WHERE Name = :courseName];
+                                                            FROM apxio__Course__c
+                                                            WHERE Name = :courseName];
             
 
          //If Course found, create an apxio__Class__c record  with the Course ID as the parentID
          If(course != null){
-             
+
             apxio__Class__c courseClass = new apxio__Class__c(
                 name = courseName,
-                apxio__Course__c  = course.Id
+                apxio__Course__r  = course.Id
             );
+
+             //Insert the new Class
+            insert courseClass;
+
+            //return  course
+            return courseClass.Id;
 
          }
 
-         //Insert the new Class
-         insert courseClass;
-
-         //return  course
-         return courseClass.Id;
+        return null;
 
     }
