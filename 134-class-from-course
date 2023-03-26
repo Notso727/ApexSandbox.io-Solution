@@ -22,7 +22,7 @@ public Id classFromCourse(String courseName) {
                   classNew.name = courseName,
                   classNew.apxio__Course__c  = course.Id
                 )
-                classNew.add;
+                courseClass.add(classNew);
             }
                
 
