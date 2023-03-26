@@ -16,8 +16,8 @@ public Id classFromCourse(String courseName) {
          If(course != null){
 
             List<apxio__Class__c> courseClass = new List<apxio__Class__c>();
-               // courseClass.name = courseName,
-               // courseClass.apxio__Course__c  = course.Id
+               courseClass.name = courseName,
+               courseClass.apxio__Course__c  = course.Id
 
              //Insert the new Class
             insert courseClass;
