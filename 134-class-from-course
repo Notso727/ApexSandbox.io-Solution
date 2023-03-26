@@ -12,7 +12,7 @@ public Id classFromCourse(String courseName) {
                                             WHERE Name = :courseName];
             
          //If Course found, create an apxio__Class__c record  with the Course ID as the parentID
-         If(course != null){
+         If(!course.isEmpty()){
                 apxio__Class__c classNew = new apxio__Class__c(
                   Name = courseName,
                   apxio__Course__c  = course.Id
