@@ -28,10 +28,7 @@ public Id classFromCourse(String courseName) {
             return courseClass.Id;
 
          } 
-         else { 
-
-             return null;
+         
+        return null;
              
-            }
-
     }
