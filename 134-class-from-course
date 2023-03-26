@@ -15,7 +15,7 @@ public Id classFromCourse(String courseName) {
          //If Course found, create an apxio__Class__c record  with the Course ID as the parentID
          If(course != null){
 
-            apxio__Class__c courseClass = new apxio__Class__c(
+            List<apxio__Class__c> courseClass = new List<apxio__Class__c>(
                 name = courseName,
                 apxio__Course__c  = course.Id
 
