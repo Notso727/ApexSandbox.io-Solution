@@ -1,0 +1,23 @@
+public void enrollStudents(List<String> emails, String className) {
+    /*Implement the method enrollStudents that takes as input a list of strings emails and a string className and
+    returns a boolean. The method should enroll all students with the provided emails into a class with the given
+    name by creating apxio__Class_Enrollment__c records.
+
+    Note that apxio__Student__c and apxio__Class__c records already exist in the database.
+     */
+
+    //Look for nulls
+
+    //SOQL to find
+    //Conduct a SOQL to get the ID of the course
+    List<apxio__Student__c> studentsToGet = [SELECT Id
+                                               FROM apxio__Student__c
+                                              WHERE apxio__Email__c = :emails];
+
+    //Create a list to gather the other info
+    List<apxio__Student__c> newStudents = new List<apxio__Student__c();
+
+
+    }
+
+}
