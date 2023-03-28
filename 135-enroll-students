@@ -14,9 +14,13 @@ public void enrollStudents(List<String> emails, String className) {
                                                FROM apxio__Student__c
                                               WHERE apxio__Email__c = :emails];
 
+    List<apxio__Class__c> classNew = [SELECT Id
+                                        FROM apxio__Class__c
+                                       WHERE Name = :className
+                                        LIMIT 1];
+
     //Create a list to gather the other info
     List<apxio__Student__c> newStudents = new List<apxio__Student__c();
 
-
-
+    
 }
