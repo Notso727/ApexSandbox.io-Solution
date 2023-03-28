@@ -1,26 +1,33 @@
 public void enrollStudents(List<String> emails, String className) {
-    /*Implement the method enrollStudents that takes as input a list of strings emails and a string className and
-    returns a boolean. The method should enroll all students with the provided emails into a class with the given
-    name by creating apxio__Class_Enrollment__c records.
+    // Look for nulls
+    if (emails == null || className == null) {
+        throw new IllegalArgumentException("emails and className cannot be null");
+    }
 
-    Note that apxio__Student__c and apxio__Class__c records already exist in the database.
-     */
+    // Conduct a SOQL query to get the ID of the course
+    apxio__Class__c classRecord = [SELECT Id
+                                   FROM apxio__Class__c
+                                   WHERE Name = :className
+                                   LIMIT 1];
+    if (classRecord == null) {
+        throw new IllegalArgumentException("No class found with name " + className);
+    }
 
-    //Look for nulls
+    // Conduct a SOQL query to get the IDs of the students
+    List<apxio__Student__c> studentsToEnroll = [SELECT Id
+                                                FROM apxio__Student__c
+                                                WHERE apxio__Email__c IN :emails];
+    if (studentsToEnroll.isEmpty()) {
+        throw new IllegalArgumentException("No students found with provided emails");
+    }
 
-    //SOQL to find
-    //Conduct a SOQL to get the ID of the course
-    List<apxio__Student__c> studentsToGet = [SELECT Id
-                                               FROM apxio__Student__c
-                                              WHERE apxio__Email__c = :emails];
-
-    List<apxio__Class__c> classNew = [SELECT Id
-                                        FROM apxio__Class__c
-                                       WHERE Name = :className
-                                        LIMIT 1];
-
-    //Create a list to gather the other info
-    List<apxio__Student__c> newStudents = new List<apxio__Student__c();
-
-    
+    // Create new enrollment records for each student/class combination
+    List<apxio__Class_Enrollment__c> enrollments = new List<apxio__Class_Enrollment__c>();
+    for (apxio__Student__c student : studentsToEnroll) {
+        apxio__Class_Enrollment__c enrollment = new apxio__Class_Enrollment__c();
+        enrollment.apxio__Class__c = classRecord.Id;
+        enrollment.apxio__Student__c = student.Id;
+        enrollments.add(enrollment);
+    }
+    insert enrollments;
 }
