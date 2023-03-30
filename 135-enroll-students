@@ -25,11 +25,11 @@ public void enrollStudents(List<String> emails, String className) {
     //Loop over the List of Students to create a new apxio__Class_Enrollment__c for each ID with the ID from the Class
     for(Integer i = 0; i < studentsToGet.size(); i++){
         apxio__Class_Enrollment__c enrollmentNew = new apxio__Class_Enrollment__c();
-        enrollmentNew.apxio__Student__c = (Id) studentsToGet[i];
-        enrollmentNew.apxio__Offered_Class__c = (Id) classNew[0];
-        newStudents.add[i];
+        enrollmentNew.apxio__Student__c = studentsToGet[i].Id;
+        enrollmentNew.apxio__Offered_Class__c = classNew[0].Id;
+        newStudents.add(enrollmentNew);
     }
 
     insert newStudents;
-    
+
 }
