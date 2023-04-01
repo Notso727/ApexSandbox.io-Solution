@@ -1,0 +1,18 @@
+public Map<String, Account> phoneToAccount(List<Account> accounts) {
+    /*Implement the method phoneToAccount that takes as input a list of Accounts, and returns a Map containing the
+    phone number as a key and the Account record as the value. Do not include accounts without a phone number.
+     */
+
+    //Create a Map to collect the data
+    Map<String, Account> phoneNumberAcc = new Map<String, Account>();
+
+    //Loop through the List to collect the data
+    for(Account acc : accounts){
+        if(acc.Phone != null) {
+            phoneNumberAcc.put(acc.phone, acc);
+        }
+
+    }
+
+    return phoneNumberAcc;
+}
