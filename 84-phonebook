@@ -1,0 +1,20 @@
+public Map<String, String> phonebook(List<Contact> contacts) {
+    /*Implement the method phonebook that takes as input a list of Contacts, and returns a Map containing the full
+    names as keys, and the contact's phone number as values. Do not include contacts without a phone number into the
+    phonebook.
+     */
+
+    //Create a new map to use for the collection and return
+    Map<String, String> m = new Map<String, String>();
+
+    //Loop over the contacts list to extract the fields
+    for(Contact c : contacts){
+        //Add in exceptions for if no phone number
+        if(c.Phone != null) {
+            m.put(c.Name, c.Phone);
+        }
+    }
+
+    return m;
+
+}
