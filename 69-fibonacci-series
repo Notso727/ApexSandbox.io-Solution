@@ -1,0 +1,36 @@
+public List<Integer> fibonacciSeries(Integer n) {
+    /* The first two numbers in the fibonacci sequence are 1, and all other numbers in the sequence are defined as the
+    sum of the two preceding fibonacci numbers. The first 10 numbers in the fibonacci sequence are 1, 1, 2, 3, 5, 8, 13,
+    21, 34, and 55.
+
+
+    Given a non-zero positive integer n, return a list of integers of size n containing (in correct order) the first n
+    numbers in the fibonacci series.
+     */
+
+    //Create variable
+    Integer x = 0;
+    Integer y = 1;
+    Integer z;
+
+    //Create a list
+    List<Integer> fiboIntegers = new List<Integer>();
+
+    //Add Fibonacci logic and add to the list
+    //Create a for loop to loop to n
+    if(n < 3) z = 1;
+    if(n == 3) z = 2;
+
+    for(Integer i = 0; i < n; i++) {
+        if(n < 3) z = 1;
+        //if(n == 3) z = 2;
+        z = (x + y);
+        y = x;
+        x = z;
+        fiboIntegers.add(z);
+    }
+
+    //Return the list
+    return fiboIntegers;
+
+}
