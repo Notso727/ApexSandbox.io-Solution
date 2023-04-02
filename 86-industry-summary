@@ -1,0 +1,24 @@
+public Map<String, Decimal> industrySummary(List<Account> accounts) {
+    /* The method industrySummary takes as input a list of accounts with Industry and AnnualRevenue fields populated.
+    The method should sum up annual revenue by each industry and return a Map with each industry as a key, and sum of
+    annual revenue for that industry as the value.
+     */
+
+    //Create a Map to collect
+    Map<String, Decimal> mapOfRevByIndustry = new Map<String, Decimal>();
+
+    //Loop over the list
+    for(Account acc : accounts){
+        if(!mapOfRevByIndustry.containsKey(acc.Industry)){
+            mapOfRevByIndustry.put(acc.Industry, acc.AnnualRevenue);
+        } else {
+            Decimal revToSum = mapOfRevByIndustry.get(acc.AnnualRevenue);
+            acc.AnnualRevenue = revToSum + acc.AnnualRevenue;
+            mapOfRevByIndustry.put(acc.Industry, acc.AnnualRevenue);
+        }
+
+    }
+
+    return mapOfRevByIndustry;
+
+}
