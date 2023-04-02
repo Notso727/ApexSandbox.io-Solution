@@ -12,8 +12,8 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
         if(!mapOfRevByIndustry.containsKey(acc.Industry)){
             mapOfRevByIndustry.put(acc.Industry, acc.AnnualRevenue);
         } else {
-            Decimal revToSum = mapOfRevByIndustry.get(acc.AnnualRevenue);
-            acc.AnnualRevenue = revToSum + acc.AnnualRevenue;
+            Decimal revToSum = mapOfRevByIndustry.get(acc.Industry);
+            acc.AnnualRevenue = (revToSum + acc.AnnualRevenue);
             mapOfRevByIndustry.put(acc.Industry, acc.AnnualRevenue);
         }
 
