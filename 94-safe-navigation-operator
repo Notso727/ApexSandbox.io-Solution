@@ -9,6 +9,6 @@ public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
 
     //Convert that Billing City to a text String and Capitalize it
     //Return the String
-    return capAccount.capitalize();
-    
+    return capAccount.toUpperCase();
+
 }
