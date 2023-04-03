@@ -4,6 +4,6 @@ public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
     null is returned in case the BillingCity is null.
      */
     
-    return accounts[0].BillingCity?.capitalize();
+    return accounts[0]?.BillingCity?.capitalize();
 
 }
