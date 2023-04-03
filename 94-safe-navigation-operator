@@ -1,0 +1,14 @@
+public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
+    /* Implement the method getAccountBillingCityWithSafeNavigation, which accepts a list of accounts as an input
+    and returns the BillingCity in upper case of the first account in the list. Use the Safe Navigation (?.) to ensure
+    null is returned in case the BillingCity is null.
+     */
+
+    //Create a variable for the Account to capture the Billing City (Make sure it's not null by using the Safe Nav)
+    String capAccount = accounts[0]?.BillingCity;
+
+    //Convert that Billing City to a text String and Capitalize it
+    //Return the String
+    return capAccount.capitalize();
+    
+}
