@@ -5,12 +5,10 @@ public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
      */
 
     //Create a variable for the Account to capture the Billing City (Make sure it's not null by using the Safe Nav)
-    String capAccount = accounts[0]?.BillingCity;
-    
-    capAccount.toUpperCase();
+    String capAccount = accounts[0].BillingCity;
 
     //Convert that Billing City to a text String and Capitalize it
     //Return the String
-    return capAccount;
+    return capAccount?.toUpperCase;
 
 }
