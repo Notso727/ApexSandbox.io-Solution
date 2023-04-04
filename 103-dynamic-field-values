@@ -1,0 +1,23 @@
+public List<String> getFieldsValue(Account acc, List<String> fields) {
+    /* Implement the method getFieldsValue, which accepts the following inputs:
+
+        An account acc
+        A list of strings fields, with each string in the list representing a valid field on the account object.
+
+        The method should return a list of values from the account record for fields listed in the
+        list fields in the correct order.
+     */
+
+    //Create a new list to collect and return
+    List<String> accountFieldValues = new List<String>();
+
+    //Use a for loop to the size of the fields list and iterate
+    //Use a safe navigation operator and add the value of acc.fields[i] to the new list
+    for(Integer i = 0; i < fields.size(); i++){
+        accountFieldValues.add((String)acc?.get(fields[i]));
+    }
+
+    //Return the new list
+    return accountFieldValues;
+    
+}
