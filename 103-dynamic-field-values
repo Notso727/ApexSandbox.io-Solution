@@ -14,7 +14,7 @@ public List<String> getFieldsValue(Account acc, List<String> fields) {
     //Use a for loop to the size of the fields list and iterate
     //Use a safe navigation operator and add the value of acc.fields[i] to the new list
     for(Integer i = 0; i < fields.size(); i++){
-        String fieldValue = String.valueOf((String)acc?.get((fields[i])));
+        String fieldValue = String.valueOf(acc?.get(fields[i]));
         accountFieldValues.add(fieldValue);
     }
 
