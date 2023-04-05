@@ -1,7 +1,5 @@
 public List<Account> checkAccounts(List<Account> accounts) {
 
- 
-
 /*Implement the method checkAccounts, which accepts a list of accounts as an input and returns a list of accounts.
 The method should behave as follows:
 
@@ -13,19 +11,22 @@ AccountException exception. Do not create new exception class - use the AccountE
 been created for you.
 */
 
-Boolean flag = false;
 
-    try {
-        for (Account acc : accounts) {
-            if (acc.BillingCity != null) return accounts;
-            if (acc.BillingCity == null) throw new AccountException('accounts
-            should not be null');
+    if (accounts == null) {
+        throw new IllegalArgumentException('accounts should not be null');
+    }
+    
+    for (Account acc : accounts) {
+        
+        if (acc.BillingCity == null) {
+            throw new AccountException('All accounts must have a BillingCity');
         }
-    } catch (IllegalArgumentException e) {
-        throw new AccountException();
+        
     }
 
-        return accounts;
+    return accounts;
 
-   //do not remove the following custom-defined exception
+}
+
+//do not remove the following custom-defined exception
 public class AccountException extends Exception {}
