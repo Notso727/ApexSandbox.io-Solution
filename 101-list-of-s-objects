@@ -19,7 +19,7 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
 
     if(!contacts.isEmpty()) {
         for (Contact con : contacts) {
-            if(acc != null) {
+            if(con != null) {
                 combinedObjects?.add(con);
             }
         }
