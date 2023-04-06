@@ -9,21 +9,17 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
     List<SObject> combinedObjects = new List<SObject>();
 
     //Loop over each list and add it to the new list
-    if(!accounts.isEmpty()){
         for (Account acc : accounts) {
             if(acc != null) {
                 combinedObjects.add(acc);
             }
         }
-    }
-
-    if(!contacts.isEmpty()) {
+    
         for (Contact con : contacts) {
-            if(con != null) {
+            if(acc != null) {
                 combinedObjects?.add(con);
             }
         }
-    }
 
     //Return the new list
     return combinedObjects;
