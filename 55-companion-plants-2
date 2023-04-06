@@ -21,11 +21,11 @@ public Boolean companionPlants(List<String> plants) {
         // Create a Loop for the List
         for (Integer i = 0; i < (plants.size() - 1); i++) {
             // Check if the plants are not companions
-            if (!( (plants.get(i).equals("lettuce") && (plants.get(i + 1).equals("cucumbers") || plants.get(i + 1).equals("onions"))) ||
-            (plants.get(i).equals("onions") && (plants.get(i + 1).equals("carrots") || plants.get(i + 1).equals("tomatoes") || plants.get(i + 1).equals("lettuce"))) ||
-            (plants.get(i).equals("cucumbers") && (plants.get(i + 1).equals("lettuce"))) ||
-            (plants.get(i).equals("carrots") && (plants.get(i + 1).equals("onions"))) ||
-            (plants.get(i).equals("tomatoes") && (plants.get(i + 1).equals("onions"))) )) {
+            if (!( (plants.get(i).equals('lettuce') && (plants.get(i + 1).equals('cucumbers') || plants.get(i + 1).equals('onions'))) ||
+            (plants.get(i).equals('onions') && (plants.get(i + 1).equals('carrots') || plants.get(i + 1).equals('tomatoes') || plants.get(i + 1).equals('lettuce'))) ||
+            (plants.get(i).equals('cucumbers') && (plants.get(i + 1).equals('lettuce'))) ||
+            (plants.get(i).equals('carrots') && (plants.get(i + 1).equals('onions'))) ||
+            (plants.get(i).equals('tomatoes') && (plants.get(i + 1).equals('onions'))) ))
             results = false;
             break; // Exit the loop, as we found a non-companion plant
         }
