@@ -1,16 +1,19 @@
 public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> contacts)
 {
     /* Implement the method getListOfsObject(), which accepts two parameters, a list of accounts, and a list of
-     contacts, as an input and returns a list of sObjects. If both lists are empty or null, return an empty 
+     contacts, as an input and returns a list of sObjects. If both lists are empty or null, return an empty
      list of sObject.
      */
-    
+
     //Create a List of Objects variable
-    List<SObject> combinedObjects = new List<SObject>(); 
-    
+    List<SObject> combinedObjects = new List<SObject>();
+
     //Loop over each list and add it to the new list
-    
+    for(Account acc : accounts){
+        combinedObjects.add(acc);
+    }
+
     //Return the new list
     return combinedObjects;
-    
+
 }
