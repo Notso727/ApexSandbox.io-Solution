@@ -10,7 +10,7 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
 
     //Loop over each list and add it to the new list
     for(Account acc : accounts){
-        combinedObjects.add(acc);
+        combinedObjects?.add(acc);
     }
 
     //Return the new list
