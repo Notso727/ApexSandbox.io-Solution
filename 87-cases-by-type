@@ -1,0 +1,12 @@
+public Map<String, List<Case>> casesByType(List<Case> cases) {
+    /*The method casesByType takes as input a list of cases and returns a Map> with case types (Type field on Case) as
+    the keys, and a list of cases of that type as values. This map should not include cases with no Type specified.
+     */
+
+    //Create a map to collect the data
+    Map<String, List<Case>> caseByCaseType = new Map<String, List<Case>>();
+
+    //Return the new map
+    return caseByCaseType;
+    
+}
