@@ -6,7 +6,15 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
     //Create a map to collect the data
     Map<String, List<Case>> caseByCaseType = new Map<String, List<Case>>();
 
+    for(Case c : cases){
+        if(!caseByCaseType.containsKey(c.Type)){
+            caseByCaseType.put(c.Type, c);
+            
+
+        }
+    }
+
     //Return the new map
     return caseByCaseType;
-    
+
 }
