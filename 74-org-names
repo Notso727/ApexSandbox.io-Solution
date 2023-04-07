@@ -1,0 +1,24 @@
+public List<String> orgNames(List<String> adjectives, List<String> animals) {
+    /* Some Salesforce orgs (Trailhead playground orgs, for example) are given random names that include a combination
+    of an adjective and an animal as a prefix. For instance, cunning-impala, curious-raccoon, and brave-hawk are
+    possible prefixes for names for such orgs.
+
+    Implement the method generateOrgNames that takes as input two lists of strings adjectives and animals, and
+    returns a list of strings containing all org name prefixes that can be formed by combining the adjectives and
+    animals. Assume that the input lists will never be empty
+     */
+
+    //Create an empty list for collecting the combined lists
+    List<String> collTrailNames = new List<String>();
+
+    //Create a loop within a loop to iterate over the first index and then every index of the second
+    for(Integer i = 0; i < adjectives.size(); i++){
+        for(Integer j = 0; j < animals.size(); j++){
+            String newCombo = adjectives[i] + animals[j];
+            //Add the concantenations to the new loop
+            collTrailNames.add(newCombo);
+        }
+    }
+    //return the list
+    return collTrailNames
+}
