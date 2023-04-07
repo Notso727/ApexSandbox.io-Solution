@@ -14,7 +14,7 @@ public List<String> orgNames(List<String> adjectives, List<String> animals) {
     //Create a loop within a loop to iterate over the first index and then every index of the second
     for(Integer i = 0; i < adjectives.size(); i++){
         for(Integer j = 0; j < animals.size(); j++){
-            String newCombo = adjectives[i] + animals[j];
+            String newCombo = adjectives[i] + ' - ' + animals[j];
             //Add the concantenations to the new loop
             collTrailNames.add(newCombo);
         }
