@@ -7,8 +7,10 @@ public boolean isSorted(List<Integer> numbers) {
     in any direction (acsending or descending), and returns false otherwise.
     */
 
-    //Create a boolean
+    //Create a Boolean and a String to establish a sort order
     Boolean flag = false;
+    String sort = 'unsorted';
+    Integer counter = 0;
 
     //Lists less than 3 are already sorted so check that first
     if(numbers.size() < 3) flag = true;
@@ -16,17 +18,21 @@ public boolean isSorted(List<Integer> numbers) {
     //Lists that are empty are also sorted
     if(numbers.isEmpty()) flag = true;
 
-        //if(numbers.toString() == (String) numbers.sort()) flag = true;
-
-        //Loop and see if it's either sorted ascending or descending
-
-
-
-        /*
-        for(Integer i = 0; i < numbers.size() - 1; i++){
-            if(numbers[i] >= numbers[i + 1]) flag = true;
+    for(Integer i = 0; i < numbers.size() - 1; i++){
+        if(numbers[i] >= numbers[i + 1]){
+            counter += 1;
+        } else {
+            counter -= 1;
         }
-        */
+        if(numbers[i] <= numbers[i + 1]){
+            counter += 1;
+        } else {
+            counter -= 1;
+        }
+    }
+
+    if(counter == numbers.size()) flag = true;
+ 
     return flag;
 
 }
