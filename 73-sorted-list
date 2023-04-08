@@ -9,7 +9,6 @@ public boolean isSorted(List<Integer> numbers) {
 
     //Create a Boolean and a String to establish a sort order
     Boolean flag = false;
-    String sort = 'unsorted';
     Integer counter = 0;
 
     //Lists less than 3 are already sorted so check that first
