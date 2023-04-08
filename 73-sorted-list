@@ -18,7 +18,8 @@ public boolean isSorted(List<Integer> numbers) {
         if(numbers[i] <= numbers[i + 1]){
             flag = true;
         } else {
-            if(numbers[i] >= numbers[i + 1]) flag = true;
+            if(numbers[i] >= numbers[i + 1]) 
+            flag = true;
         }
         
 }
