@@ -5,12 +5,11 @@ public List<Account> getAccountsFromJSONString(String inputJSON){
 
     //Create a List variable
     List<Account> newAccounts = new List<Account>();
-    Account Acc = new Account;
 
     //Use the JSON deserialize method
-    JSON.deserialize(inputJSON, (Type) Acc);
+    JSON.deserialize(inputJSON, (Type) newAccounts);
 
     //
     return newAccounts;
-    
+
 }
