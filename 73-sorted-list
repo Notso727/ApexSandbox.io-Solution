@@ -13,19 +13,20 @@ public boolean isSorted(List<Integer> numbers) {
     //Lists less than 3 are already sorted so check that first
     if(numbers.size() < 3) flag = true;
 
-    //if(numbers.toString() == (String) numbers.sort()) flag = true;
+    //Lists that are empty are also sorted
+    if(numbers.isEmpty() = true) flag = true;
 
-    //Loop and see if it's either sorted ascending or descending
-    for(Integer i = 0; i < numbers.size() - 1; i++){
+        //if(numbers.toString() == (String) numbers.sort()) flag = true;
+
+        //Loop and see if it's either sorted ascending or descending
+
+
+
+        /*
+        for(Integer i = 0; i < numbers.size() - 1; i++){
             if(numbers[i] >= numbers[i + 1]) flag = true;
         }
-
-    //Loop and see if it's either sorted ascending or descending
-    for(Integer i = 0; i < numbers.size() - 1; i++){
-            if(numbers[i] <= numbers[i + 1]) flag = true;
-        }
-
-    //return the boolean
+        */
     return flag;
 
 }
