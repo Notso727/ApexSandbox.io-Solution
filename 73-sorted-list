@@ -14,7 +14,7 @@ public boolean isSorted(List<Integer> numbers) {
     if(numbers.size() < 3) flag = true;
 
     //Lists that are empty are also sorted
-    if(numbers.isEmpty() = true) flag = true;
+    if(numbers.isEmpty()) flag = true;
 
         //if(numbers.toString() == (String) numbers.sort()) flag = true;
 
