@@ -33,7 +33,7 @@ public boolean isSorted(List<Integer> numbers) {
         
     }
 
-    if(acounter == numbers.size() - 1 || dcounter == number.size() - 1) flag = true;
+    if(acounter == numbers.size() - 1 || dcounter == numbers.size() - 1) flag = true;
 
     return flag;
 
