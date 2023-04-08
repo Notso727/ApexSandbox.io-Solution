@@ -1,0 +1,20 @@
+public boolean isSorted(List<Integer> numbers) {
+    /* A list is considered to be sorted ascending when no element in the list is smaller than the preceding element
+    if one is present. Similarly, a list is considered sorted descending if no element in the list is larger than the
+    preceding element if any.
+
+    Implement the method isSorted that takes as input a list of integers numbers, returns true if the list is sorted
+    in any direction (acsending or descending), and returns false otherwise.
+    */
+
+    //Create a boolean
+    Boolean flag = false;
+
+    //Lists less than 3 are already sorted so check that first
+    if(numbers.size() <= 3) flag = true;
+
+    //Loop and see if it's either sorted ascending or descending
+    
+    //return the boolean
+    return flag;
+}
