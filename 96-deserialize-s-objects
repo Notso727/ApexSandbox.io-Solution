@@ -1,15 +1,12 @@
 public List<Account> getAccountsFromJSONString(String inputJSON){
-    /* Implement the method getAccountsFromJSONString, which takes a JSON string of a list of accounts as an
-    input and returns a list of accounts. If the input string is empty or null, return null.
-     */
+    // Check if the input JSON string is empty or null
+    if (String.isEmpty(inputJSON)) {
+        return null;
+    }
 
-    //Create a List variable
-    List<Account> newAccounts = new List<Account>();
+    // Deserialize the JSON string into a List of Accounts
+    List<Account> newAccounts = (List<Account>) JSON.deserialize(inputJSON, List<Account>.class);
 
-    //Use the JSON deserialize method
-    JSON.deserialize(inputJSON, (Type) newAccounts);
-
-    //
+    // Return the deserialized list of Accounts
     return newAccounts;
-
 }
