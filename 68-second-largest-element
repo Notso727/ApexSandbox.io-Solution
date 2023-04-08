@@ -1,5 +1,5 @@
 public Integer secondLargest(List<Integer> numbers) {
     //code here
     numbers.sort();
-    return numbers.size() - 1;
+    return numbers[numbers.size() - 1];
 }
