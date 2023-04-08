@@ -14,7 +14,7 @@ public boolean isSorted(List<Integer> numbers) {
     if(numbers.size() <= 3) flag = true;
 
     //Loop and see if it's either sorted ascending or descending
-    for(Integer i = 0; i < numbers.size(); i++){
+    for(Integer i = 0; i < numbers.size() - 1; i++){
         if(numbers[i] < numbers[i + 1]) flag = true;
     }
 
