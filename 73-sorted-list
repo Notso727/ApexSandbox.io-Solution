@@ -9,7 +9,8 @@ public boolean isSorted(List<Integer> numbers) {
 
     //Create a Boolean and a String to establish a sort order
     Boolean flag = false;
-    Integer counter = 0;
+    Integer acounter = 0;
+    Integer dcounter = 0;
 
     //Lists less than 3 are already sorted so check that first
     if(numbers.size() < 3) flag = true;
@@ -19,19 +20,19 @@ public boolean isSorted(List<Integer> numbers) {
 
     for(Integer i = 0; i < numbers.size() - 1; i++){
         if(numbers[i] >= numbers[i + 1]){
-            counter += 1;
+            acounter += 1;
         } else {
-            counter -= 1;
+            acounter -= 1;
         }
         if(numbers[i] <= numbers[i + 1]){
-            counter += 1;
+            dcounter += 1;
         } else {
-            counter -= 1;
+            dcounter -= 1;
         }
     }
 
-    if(counter == numbers.size()) flag = true;
- 
+    if(acounter == numbers.size() || dcounter == numbers.size()) flag = true;
+
     return flag;
 
 }
