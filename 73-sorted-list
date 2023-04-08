@@ -24,16 +24,16 @@ public boolean isSorted(List<Integer> numbers) {
         } else {
             acounter -= 1;
         }
-        /*
+        
         if(numbers[i] <= numbers[i + 1]){
             dcounter += 1;
         } else {
             dcounter -= 1;
         }
-        */
+        
     }
 
-    if(acounter == numbers.size() - 1) flag = true;
+    if(acounter == numbers.size() - 1 || dcounter == number.size() - 1) flag = true;
 
     return flag;
 
