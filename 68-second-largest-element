@@ -17,8 +17,8 @@ public Integer secondLargest(List<Integer> numbers) {
     //What are the edge cases: null or empty list, same number, only one number
     //Loop over the list and if the current Integer is bigger than the last capture that number
     if(!numbers.isEmpty()){
-        for(Integer i = 0; i < numbers.size() - 1; i++){
-            if(numbers[i + 1] > numbers[i]){
+        for(Integer i = 0; i < numbers.size(); i++){
+            if(numbers[i] > numbers[i - 1]){
                 biggestInteger = numbers[i];
             }
         }
