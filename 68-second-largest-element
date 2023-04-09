@@ -12,25 +12,22 @@ public Integer secondLargest(List<Integer> numbers) {
 
     //Create variables
     Integer biggestInteger = -2147483647 - 1;
-    Integer secondBiggestInteger = -2147483647 - 1;
+    Integer secondBiggestInteger = -2147483647;
 
     //What are the edge cases: null or empty list, same number, only one number
     //Loop over the list and if the current Integer is bigger than the last capture that number
+    //Loop again and if that number is not bigger than the last but not bigger than the biggest...
     if(!numbers.isEmpty()){
         for(Integer num : numbers){
             if(num > biggestInteger){
                 biggestInteger = num;
             }
-        }
-        for(Integer num : numbers){
-            if(num > secondBiggestInteger || num < biggestInteger){
+            if(num > secondBiggestInteger || num < biggestInteger) {
                 secondBiggestInteger = num;
             }
         }
     }
-
-    //Loop again and if that number is not bigger than the last but not bigger than the biggest...
-
+    
     //return the final number
     return secondBiggestInteger;
 
