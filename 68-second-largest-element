@@ -22,13 +22,10 @@ public Integer secondLargest(List<Integer> numbers) {
             if(num > biggestInteger){
                 biggestInteger = num;
             }
-            if(num > secondBiggestInteger || num < biggestInteger) {
-                secondBiggestInteger = num;
-            }
         }
     }
-    
+
     //return the final number
-    return secondBiggestInteger;
+    return biggestInteger;
 
 }
