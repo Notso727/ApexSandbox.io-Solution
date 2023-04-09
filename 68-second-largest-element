@@ -20,12 +20,13 @@ public Integer secondLargest(List<Integer> numbers) {
     if(!numbers.isEmpty()){
         for(Integer num : numbers){
             if(num > biggestInteger){
+                biggestInteger = secondBiggestInteger;
                 biggestInteger = num;
             }
         }
     }
 
     //return the final number
-    return biggestInteger;
+    return secondBiggestInteger;
 
 }
