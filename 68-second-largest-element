@@ -17,14 +17,14 @@ public Integer secondLargest(List<Integer> numbers) {
     //What are the edge cases: null or empty list, same number, only one number
     //Loop over the list and if the current Integer is bigger than the last capture that number
     if(!numbers.isEmpty()){
-        for(Integer i = 1; i < numbers.size(); i++){
-            if(numbers[i] > numbers[i - 1]){
-                biggestInteger = numbers[i];
+        for(Integer number : numbers){
+            if(number > biggestInteger){
+                biggestInteger = number;
             }
         }
     }
 
-    
+
     //Loop again and if that number is not bigger than the last but not bigger than the biggest...
 
     //return the final number
