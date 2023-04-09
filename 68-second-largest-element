@@ -20,7 +20,9 @@ public Integer secondLargest(List<Integer> numbers) {
         for(Integer num : numbers){
             if(num > biggestInteger){
                 biggestInteger = num;
-                }
+            }
+        }
+        for(Integer num : numbers){
             if(num > secondBiggestInteger || num < biggestInteger){
                 secondBiggestInteger = num;
             }
