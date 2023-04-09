@@ -11,8 +11,8 @@ public Integer secondLargest(List<Integer> numbers) {
      */
 
     //Create variables
-    Integer biggestInteger;
-    Integer secondBiggestInteger;
+    Integer biggestInteger = 0;
+    Integer secondBiggestInteger = 0;
 
     //What are the edge cases: null or empty list, same number, only one number
     //Loop over the list and if the current Integer is bigger than the last capture that number
