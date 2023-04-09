@@ -22,7 +22,7 @@ public Integer secondLargest(List<Integer> numbers) {
             if(num > biggestInteger){
                 secondBiggestInteger = biggestInteger;
                 biggestInteger = num;
-                if(num > secondBiggestInteger || num < biggestInteger){
+                if(num > secondBiggestInteger && num < biggestInteger){
                     secondBiggestInteger = num;
                 }
             }
