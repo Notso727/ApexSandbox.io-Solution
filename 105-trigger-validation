@@ -10,17 +10,10 @@ public void validateInsert(List<Opportunity> opportunities){
     if(!opportunities.isEmpty()){
         for(Opportunity opp : opportunities){
             //If Stagename is 'Closed Won' AND Description field is null or empty
-            if(opp.StageName == 'Closed Won' && opp.Description == null){
+            if(opp.StageName == 'Closed Won' && (opp.Description == null || opp.Description == '')){
                 //add an error on the description field
                 opp.Description.addError('Description should not be empty for Closed Won opportunity.');
             }
         }
     }
-
-
-    
-
-    
-
-    //TODO Edge cases- empty versus null,
 }
