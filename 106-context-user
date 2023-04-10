@@ -10,7 +10,7 @@ public Map<String,String> getContextUserInformation(){
     currentUserData.put('UserName', UserInfo.getUserName());
     currentUserData.put('ProfileId', UserInfo.getProfileId());
     currentUserData.put('EmailId', UserInfo.getUserEmail());
-    currentUserData.put(Type, UserInfo.getUserType());
+    currentUserData.put('Type', UserInfo.getUserType());
 
     //Return a map
     return currentUserData;
