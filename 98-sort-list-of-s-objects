@@ -1,0 +1,17 @@
+public List<Account> getAccounts(List<Account> accounts) {
+    /* Implement the method getAccounts(), function, which accepts a list of accounts as input and returns a new
+    list of accounts sorted in descending order based on the Annual Revenue field.
+     */
+
+    //Create a list
+    List<Account> sortedAccounts = new List<Account>();
+    
+    for(Account acc : accounts){
+        sortedAccounts.add(acc);
+    }
+
+    sortedAccounts.sort();
+    //Return a list
+    return sortedAccounts;
+
+}
