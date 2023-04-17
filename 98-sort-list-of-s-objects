@@ -3,15 +3,44 @@ public List<Account> getAccounts(List<Account> accounts) {
     list of accounts sorted in descending order based on the Annual Revenue field.
      */
 
-    //Create a list
-    List<Account> sortedAccounts = new List<Account>();
-    
-    for(Account acc : accounts){
-        sortedAccounts.add(acc);
+    List<AccountWrapper> accWrapperList = new List<AccountWrapper>();
+
+        // Wrap Account records in AccountWrapper
+    for (Account acc : accounts) {
+        accWrapperList.add(new AccountWrapper(acc));
     }
 
-    sortedAccounts.sort();
-    //Return a list
-    return sortedAccounts;
+    // Sort the AccountWrapper list
+    accWrapperList.sort();
+
+    // Get the sorted Account records
+    List<Account> sortedAccList = new List<Account>();
+    for (AccountWrapper accWrapper : accWrapperList) {
+        sortedAccList.add(accWrapper.acc);
+    }
+
+    // Now, 'sortedAccList' contains the sorted Account records based on the AnnualRevenue field
+    return sortedAccList;
+
+}
+
+//Extra class here
+
+public class AccountWrapper implements Comparable<AccountWrapper> {
+    public Account acc { get; set; }
+
+    public AccountWrapper(Account a) {
+        acc = a;
+    }
+
+    public Integer compareTo(AccountWrapper accWrapperToCompare) {
+        if (this.acc.AnnualRevenue == accWrapperToCompare.acc.AnnualRevenue) {
+            return 0;
+        } else if (this.acc.AnnualRevenue > accWrapperToCompare.acc.AnnualRevenue) {
+            return -1;
+        } else {
+            return 1;
+        }
+    }
 
 }
