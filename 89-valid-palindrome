@@ -8,19 +8,29 @@ public Boolean isPalindrome(String str){
     spaces.
      */
 
+    //Convert the str to lowercase
+
     //Create a boolean variable flag
-    Boolean validPalindrome = false;
+    //Boolean validPalindrome = false;
 
     //Create a list to capture the characters
     List<Integer> charArray = new List<Integer>();
     List<Integer> originalArray = new List<Integer>();
 
+    //Must make lowercase and also remove non letters
+
     //Loop through to break out chars into the List
     for (Integer i = 0; i < str.length(); i++) {
-        charArray.add(str.charAt(i));
-        originalArray.add(str.charAt(i));
-    }
+        if(str.charAt(i) > 97 && str.charAt(i) < 122){
+            charArray.add(str.charAt(i));
+            originalArray.add(str.charAt(i));
+        } else if(str.charAt(i) > 65 && str.charAt(i) < 90){
+            charArray.add(str.charAt(i) + 32);
+            originalArray.add(str.charAt(i) + 32);
+        }
 
+    }
+    
     //Utilize two pointers to reverse it
     Integer left = 0;
     Integer right = charArray.size() -1;
