@@ -31,11 +31,7 @@ public Boolean isPalindrome(String str){
         charArray[right--] = temp;
     }
 
-    if(charArray == originalArray) { 
-        validPalindrome = true;
-    };
-
     //return boolean
-    return validPalindrome;
-    
+    return charArray.equals(originalArray);
+
 }
