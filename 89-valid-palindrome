@@ -9,7 +9,7 @@ public Boolean isPalindrome(String str){
      */
 
     //Create a list to capture the characters
-    List<String> charArray = new List<String>();
+    List<Integer> charArray = new List<Integer>();
 
     //Loop through to break out chars into the List
     for (Integer i = 0; i < str.length(); i++) {
@@ -21,7 +21,7 @@ public Boolean isPalindrome(String str){
     Integer right = charArray.size() -1;
 
     while (left < right){
-        String temp = charArray[left];
+        Integer temp = charArray[left];
         charArray[left++] = charArray[right];
         charArray[right--] = temp;
     }
