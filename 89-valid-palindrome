@@ -8,11 +8,6 @@ public Boolean isPalindrome(String str){
     spaces.
      */
 
-    //Convert the str to lowercase
-
-    //Create a boolean variable flag
-    //Boolean validPalindrome = false;
-
     //Create a list to capture the characters
     List<Integer> charArray = new List<Integer>();
     List<Integer> originalArray = new List<Integer>();
