@@ -33,7 +33,7 @@ public Boolean isPalindrome(String str){
     
     //Utilize two pointers to reverse it
     Integer left = 0;
-    Integer right = charArray.size() -1;
+    Integer right = charArray.size();
 
     while (left < right){
         Integer temp = charArray[left];
