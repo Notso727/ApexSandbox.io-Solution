@@ -8,12 +8,17 @@ public Boolean isPalindrome(String str){
     spaces.
      */
 
+    //Create a boolean variable flag
+    Boolean validPalindrome = false;
+
     //Create a list to capture the characters
     List<Integer> charArray = new List<Integer>();
+    List<Integer> originalArray = new List<Integer>();
 
     //Loop through to break out chars into the List
     for (Integer i = 0; i < str.length(); i++) {
         charArray.add(str.charAt(i));
+        originalArray.add(str.charAt(i));
     }
 
     //Utilize two pointers to reverse it
@@ -26,6 +31,11 @@ public Boolean isPalindrome(String str){
         charArray[right--] = temp;
     }
 
+    if(charArray == originalArray) { 
+        validPalindrome = true;
+    };
+
     //return boolean
-    return true;
+    return validPalindrome;
+    
 }
