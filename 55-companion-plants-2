@@ -8,14 +8,14 @@ public Boolean companionPlants(List<String> plants) {
     every plant in the list is planted next to a companion and return false otherwise.
     */
 
-    //Loop over the List and check if the current element is a companion to the next
-
     // Create a Boolean flag variable
     Boolean results = true;
 
     // First, check to see if the list is empty and return true
+    if(plants.size() == 1) results = false;
+    
     if (plants.isEmpty()) {
-        return true;
+        results = true;
     } else {
         // Create a Loop for the List
         for (Integer i = 0; i < (plants.size() - 1); i++) {
