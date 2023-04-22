@@ -1,17 +1,31 @@
 public Boolean isPalindrome(String str){
-    /*A String is a considered a valid palindrome if it reads the same forwards and backwards. For the purpose of this 
-    problem, we consider a String to be a valid palindrome if it reads the same forwards and backwards after after 
+    /*A String is a considered a valid palindrome if it reads the same forwards and backwards. For the purpose of this
+    problem, we consider a String to be a valid palindrome if it reads the same forwards and backwards after after
     converting all characters to lowercase, and removing all characters that are not a number or a letter.
-    
-    Given a String str, return true if is a valid palindrome given the definition above, and return false if it is not. 
-    Assume that the input will contain only English numbers and letters (0-9, a-z, A-Z) along with punctuation and 
+
+    Given a String str, return true if is a valid palindrome given the definition above, and return false if it is not.
+    Assume that the input will contain only English numbers and letters (0-9, a-z, A-Z) along with punctuation and
     spaces.
      */
-    
+
     //Create a list to capture the characters
-    
+    List<String> charArray = new List<String>();
+
+    //Loop through to break out chars into the List
+    for (Integer i = 0; i < str.length(); i++) {
+        charArray.add(str.charAt(i));
+    }
+
     //Utilize two pointers to reverse it
-    
+    Integer left = 0;
+    Integer right = charArray.size() -1;
+
+    while (left < right){
+        String temp = charArray[left];
+        charArray[left++] = charArray[right];
+        charArray[right--] = temp;
+    }
+
     //return boolean
     return true;
 }
