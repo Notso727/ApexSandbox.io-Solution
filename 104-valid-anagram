@@ -5,35 +5,30 @@ public boolean isAnagram(String s1, String s2) {
         words are anagrams. Assume that the two strings contain only lowercase alphabets a-z.
          */
 
-
-
-        //TODO Break out the words into maps and compare the maps
-
         //Edge Cases: s1 empty- check for null, s2 empty- null check, both empty
         if(s1 == null || s2 == null){
                 return false;
         }
 
-
         //Create maps
-        Map<String, Integer> s1Map = new Map<String, Integer>();
-
-        for (Integer i = 0; i < s1.length(); i++) {
-            String letter = s1.substring(i, i + 1); // Get the character at position i
-            incrementCounter(s1Map, letter); // Increment the count for this letter in the Map
-        }
-
-        //Do the same for the second string
-        Map<String, Integer> s2Map = new Map<String, Integer>();
-
-        for (Integer i = 0; i < s2.length(); i++) {
-            String letter = s2.substring(i, i + 1); // Get the character at position i
-            incrementCounter(s2Map, letter); // Increment the count for this letter in the Map
-        }
+        Map<String, Integer> s1Map = populateMap(s1);
+        Map<String, Integer> s2Map = populateMap(s2);
 
         //Compare the maps
         return s1Map.equals(s2Map);
 
+    }
+
+    // Create a method to populate the map with the character counts
+    private Map<String, Integer> populateMap(String s) {
+        Map<String, Integer> charMap = new Map<String, Integer>();
+
+        for (Integer i = 0; i < s.length(); i++) {
+            String letter = s.substring(i, i + 1); // Get the character at position i
+            incrementCounter(charMap, letter); // Increment the count for this letter in the Map
+        }
+
+        return charMap;
     }
 
     //Create a Counter Map function
@@ -48,3 +43,5 @@ public boolean isAnagram(String s1, String s2) {
         // Update the value in the Map
         counterMap.put(key, count);
     }
+
+}
