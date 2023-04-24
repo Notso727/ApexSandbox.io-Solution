@@ -1,17 +1,50 @@
 public boolean isAnagram(String s1, String s2) {
-    /*
-    Two words are considered valid anagrams if they are composed of the exact same letters with the exact same
-    frequency. Implement the method isAnagram that takes as input two strings s1 and s2, and returns true if the two
-    words are anagrams. Assume that the two strings contain only lowercase alphabets a-z.
-     */
+        /*
+        Two words are considered valid anagrams if they are composed of the exact same letters with the exact same
+        frequency. Implement the method isAnagram that takes as input two strings s1 and s2, and returns true if the two
+        words are anagrams. Assume that the two strings contain only lowercase alphabets a-z.
+         */
 
-    //TODO Break out the words into maps and compare the maps
 
-    //Edge Cases: s1 empty- check for null, s2 empty- null check, both empty
-    if(s1 == null || s2 == null){
-        return false;
+
+        //TODO Break out the words into maps and compare the maps
+
+        //Edge Cases: s1 empty- check for null, s2 empty- null check, both empty
+        if(s1 == null || s2 == null){
+                return false;
+        }
+
+
+        //Create maps
+        Map<String, Integer> s1Map = new Map<String, Integer>();
+
+        for (Integer i = 0; i < s1.length(); i++) {
+            String letter = s1.substring(i, i + 1); // Get the character at position i
+            incrementCounter(s1Map, letter); // Increment the count for this letter in the Map
+        }
+
+        //Do the same for the second string
+        Map<String, Integer> s2Map = new Map<String, Integer>();
+
+        for (Integer i = 0; i < s2.length(); i++) {
+            String letter = s2.substring(i, i + 1); // Get the character at position i
+            incrementCounter(s2Map, letter); // Increment the count for this letter in the Map
+        }
+
+        //Compare the maps
+        return s1Map.equals(s2Map);
+
     }
 
-    return true;
-
-}
+    //Create a Counter Map function
+    public void incrementCounter(Map<String, Integer> counterMap, String key) {
+        // Get the value for the key and initialize it to 0 if it doesn't exist
+        Integer count = counterMap.get(key);
+        if (count == null) {
+            count = 0;
+        }
+        // Increment the counter
+        count++;
+        // Update the value in the Map
+        counterMap.put(key, count);
+    }
