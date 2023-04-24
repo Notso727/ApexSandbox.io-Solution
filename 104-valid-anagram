@@ -43,5 +43,3 @@ public boolean isAnagram(String s1, String s2) {
         // Update the value in the Map
         counterMap.put(key, count);
     }
-
-}
