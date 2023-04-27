@@ -5,14 +5,29 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
     the values in list1 and lis2.
      */
 
-    //Create a List to return
+    //Create a List to return and pointer variables
     List<Integer> sortedList = new List<Integer>();
+    Integer pointer1 = 0;
+    Integer pointer2 = 0;
+
 
     //Look at the edge cases- list 1 or 2 or both is empty
-    if(list1.isEmpty()) return list2;
-    
-    if(list2.isEmpty()) return  list1;
+    if (list1.isEmpty()) return list2;
+    if (list2.isEmpty()) return list1;
 
+    //Create a two pointer function
+    while (pointer1 < list1.size() && pointer2 < list2.size()){
+        if (list1[pointer1] < list2[pointer2]) {
+            sortedList.add(list1[pointer1]);
+            list1.remove(pointer1);
+            pointer1++;
+        } else {
+            sortedList.add(list2[pointer2]);
+            list2.remove(pointer2);
+            pointer2++;
+        }
+        
+    }
 
     //Return the List
     return sortedList;
