@@ -19,16 +19,27 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
     while (pointer1 < list1.size() && pointer2 < list2.size()){
         if (list1[pointer1] < list2[pointer2]) {
             sortedList.add(list1[pointer1]);
-            //list1.remove(pointer1);
             pointer1++;
         } else {
             sortedList.add(list2[pointer2]);
-            //list2.remove(pointer2);
             pointer2++;
         }
 
     }
 
+    // Add any remaining elements from listA
+    while (pointer1 < list1.size()) {
+        sortedList.add(listA[pointer1]);
+        pointer1++;
+    }
+
+    // Add any remaining elements from listB
+    while (pointer2 < list2.size()) {
+        sortedList.add(list2[pointer2]);
+        pointer2++;
+    }
+
     //Return the List
     return sortedList;
+
 }
