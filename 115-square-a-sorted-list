@@ -9,7 +9,7 @@ public static List<Integer> squareList(List<Integer> nums){
     
     //Iterate over the Nums List and square each value
     for (Integer n : nums){
-        n = n * n;
+        n = (n * n);
         squaredNums.add(n);
     }
     
