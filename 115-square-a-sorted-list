@@ -12,9 +12,9 @@ public static List<Integer> squareList(List<Integer> nums){
         n = (n * n);
         squaredNums.add(n);
     }
-  
+
     //Sort the new list
     squaredNums.sort();
 
-    return null;
+    return squaredNums;
 }
