@@ -11,14 +11,14 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
     Integer right = opportunities.size();
     Integer middle = (left + right) / 2;
 
-    if (Integer.valueOf(opportunities[middle]) == target ) {
+    if ((opportunities[middle].Amount) == target ) {
         return middle;
     }
-    
-    
-    
-    
-    
+
+
+
+
+
     //Return the Target Integer
     return middle;
 }
