@@ -1,0 +1,24 @@
+public static Integer search(List<Opportunity> opportunities, Integer target){
+    /*
+    Given a list of opportunities sorted by the Amount field and an Integer target, implement a solution to search the
+    list and return the index of the opportunity with an amount that is equal to the target.
+
+    In the list does not contain a matching value return negative 1.
+     */
+
+    //Create variables
+    Integer left = 0;
+    Integer right = opportunities.size();
+    Integer middle = (left + right) / 2;
+
+    if (Integer.valueOf(opportunities[middle]) == target ) {
+        return middle;
+    }
+    
+    
+    
+    
+    
+    //Return the Target Integer
+    return middle;
+}
