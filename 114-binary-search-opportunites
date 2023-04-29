@@ -9,16 +9,23 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
     //Create variables
     Integer left = 0;
     Integer right = opportunities.size();
-    Integer middle = (left + right) / 2;
+    
 
-    if ((opportunities[middle].Amount) == target ) {
-        return middle;
+    while (left < right) {
+        //Define the new middle
+        Integer middle = (left + right) / 2;
+
+        if ((opportunities[middle].Amount) == target ) {
+            return middle;
+        }
+
+        if (target < opportunities[middle].Amount) {
+            right = middle - 1;
+        } else {
+            left = middle + 1;
+        }
+        
     }
-
-
-
-
-
-    //Return the Target Integer
-    return middle;
+    //Return -1 if no Target value is found
+    return -1;
 }
