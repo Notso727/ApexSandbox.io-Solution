@@ -8,13 +8,13 @@ public static List<Integer> squareList(List<Integer> nums){
     List<Integer> squaredNums = new List<Integer>;
 
     //Iterate over the Nums List and square each value
-    for (Integer n : nums){
-    n = (Integer) Math.pow(n, 2);
-    squaredNums.add(n);
-    }
+    //for (Integer n : nums){
+    //n = (Integer) Math.pow(n, 2);
+    //squaredNums.add(n);
+    //}
 
     //Sort the new list
-    squaredNums.sort();
+    //squaredNums.sort();
 
     return squaredNums;
 
